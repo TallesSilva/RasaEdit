@@ -31,38 +31,38 @@ templates:
   utter_greet:
     - text: "hey there!"
   utter_goodbye:
-    - text: "goodbye :("
-    - text: "Bye-bye"
+    - text: "Adeus :("
+    - text: "Até logo"
   utter_default:
     - text: "default message"
   utter_ack_dosearch:
-    - text: "ok let me see what I can find"
+    - text: "Ok, deixe me ver o que encontrar"
   utter_ack_findalternatives:
-    - text: "ok let me see what else there is"
+    - text: "Ok, deixe me ver o que mais há"
   utter_ack_makereservation:
-    - text: "ok making a reservation for restaurant (price={price} cuisine={cuisine}) in location={location} for count={people}? "
+    - text: "Ok, fazendo reserva no restaurante (price={price} cuisine={cuisine}) no location={location} para count={people}? "
       buttons:
-        - title: "thank you"
-          payload: "thank you"
+        - title: "Obrigado"
+          payload: "Obrigado"
   utter_ask_cuisine:
-    - text: "what kind of cuisine would you like?"
+    - text: "Que tipo de comida voce gosta?"
   utter_ask_howcanhelp:
-    - text: "how can I help you?"
+    - text: "Como posso ajudar voce?"
   utter_ask_location:
-    - text: "where?"
+    - text: "Onde?"
   utter_ask_moreupdates:
-    - text: "if you'd like to modify anything else, please tell me what. This is what I currently have: {location} (price: {price}, cuisine: {cuisine}) for {people} people."
+    - text: "Se voce precisa que eu faça alguma alteração oode me informar. Estas são as suas informações: {location} (price: {price}, cuisine: {cuisine}) for {people} people."
   utter_ask_numpeople:
-    - text: "for how many people?"
+    - text: "Para quantas pessoas?"
   utter_ask_price:
-    - text: "in which price range?"
+    - text: "Em qual faixa de preço?"
       buttons:
-      - title: "cheap"
-        payload: "cheap"
-      - title: "expensive"
-        payload: "expensive"
+      - title: "barato"
+        payload: "barato"
+      - title: "expansivo"
+        payload: "expansivo"
   utter_on_it:
-    - text: "I'm on it"
+    - text: "Estou trabalhando nisso"
 
 actions:
 - utter_greet
