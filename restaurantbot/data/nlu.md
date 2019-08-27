@@ -1,101 +1,88 @@
 ## intent:affirm
-- uh yes im looking for a cheap restaurant in the west part of town
-- yeah a cheap restaurant serving international food
-- correct
-- ye
-- uh yes restaurant that serves danish food
-- let's do it
-- yeah
-- yes that sells korean food
-- yes can i have can i get swedish food in any area
-- yes id like an expensive restaurant in the east part of town
-- uh yes a cheap restaurant
-- yes that serves korean food
-- um yes
-- yes knocking
-- yes italian food
-- yes in the moderately priced
-- thats correct gastropub food
-- uh yes im looking for a cheap restaurant that serves medetanian food
-- yes yes
-- uh yes can i find a restaurant in the east part of town that serves chinese
-- uh yes im looking for malaysian food
-- right
-- yea
-- yes
-- yes i am in the east part of town right now and i am looking for any place that serves indonesian food
-- yes south part of town
-- yes right
-- yes and i dont care about the price range
-- yeah i need to find
-- uh yes i need the north part of town
-- uh yeah im looking for a restaurant in the south part of town and that serves kosher food
-- yea thank you good bye
-- yes can i have
-- yes and in french please
-- uh yes can i find a moderately priced restaurant and it serve it should serve brazilian food
-- right on good bye peace
-- yes in the west part of town
-- yes barbecue food
-- i love that
-- yes spanish restaurant
+- uh, estou procurando um restaurante barato na parte oeste da cidade
+- Sim, um restaurante barato que ofereça comida internacional
+- correto
+- sim
+- um restaurante que tenha comida dinamarquesa
+- vamos fazer isso
+- sim, que tenha comida coreana
+- sim, posso encontrar comida sueca em qualquer area
+- sim, eu gostaria de um restaurante caro na paste oeste da cidade
+- sim, um restaurate barato
+- sim, eles servem comida koreana
+- sim, batendo
+- sim, comida italiana
+- sim, um preço moderado
+- isto é comida gastropub
+- sim, estou procurando comida barata de um restaurate mediterraneo
+- sim, posso encontrar um restaurante na parte leste da cidade que serve comida chinesa?
+- sim, estou procurando por comida malaysian
+- certo
+- sim, eu estou na parte leste da cidade agora e estou procurando qualquer lugar que serve comida indonésia
+- sim, eu preciso para a parte sul da cidade
+- sim, certo
+- sim e eu não me importo com a faixa de preço
+- sim, eu preciso encontrar
+- sim, eu preciso para a parte norte da cidade
+- sim, estou procurando um restaurante na parte sul da cidade e que server comida kosher
+- obrigado e até logo
+- posso ter
+- sim e em francês por favor
+- sim, posso encontrar um restaurante de comida brasileira e preço moderado
+- sim, na parte oeste da cidade
+- sim, comida barbecue
+- eu amo isso
+- sim, um restaurante espanhol
 
 ## intent:deny
-- no danish food
-- no north
-- no
-- no new selection
-- no im looking for pan asian
-- no thanks
-- no i want american food
-- no thank you good bye
-- no thank you
-- no spanish food
-- no im looking in the south of the town
-- no indian food
-- uh no
-- no american food
-- no the south part
-- oh no and cheap
-- no spanish
-- no british food
-- no south part of town
-- no im looking for one that serves vietnamese food
-- do you have something else
-- no chinese
-- no i want halal food
-- no hungarian food
-- no center
-- no this does not work for me
-- no thai
+- não, comida dinamarquesa
+- não, no norte
+- não
+- não, nova seleção
+- não, estou procurando por asiatica
+- não, obrigado
+- não, procuro por comida americana
+- não, obrigado e adeus
+- não, comida da espanha
+- não, estou procurando pelo sul da cidade
+- não, comida indiana
+- não, comida americana
+- não, na parte do sul
+- oh não, e barato
+- não, espanhola
+- não, comida britanica
+- não, parte sul da cidade
+- não, estou procurando por comida vietnamese
+- voce tem algo mais
+- não, chinesa
+- não, comida de halal
+- não, comida hungara
+- não, centro
+- não, isso não funciona pra mim
+- não, thai
 
 ## intent:greet
-- hi there
-- hello there
-- hey
-- hi
-- hey bot
-- good morning
-- goodmorning
-- hello
-- goodevening
-- goodafternoon
-- good evening
-- morning
-- good afternoon
+- Olá
+- oi
+- tudo bem ?
+- oi bot
+- Bom dia
+- Boa tarde
+- Boa noite
+
 
 ## intent:inform
-- [afghan](cuisine) food
-- how bout [asian oriental](cuisine)
-- im looking for a [moderately](price:moderate) priced restaurant in the [east](location) part of town
-- find [moderately](price:moderate) priced restaurant in the [west](location) part of town
-- what about [indian](cuisine) food
-- [south](location) part of town
-- uh how about [turkish](cuisine) type of food
-- yea im looking for a really [cheap](price) restaurant
-- a [moderate](price) restaurant in the [west](location) part of town
+- [afghan](cuisine) comida
+- que tal [asian oriental](cuisine)
+- estou procurando por [moderately](price:moderate) restaurante em [east](location) parte da cidade
+- encontrar [moderately](price:moderate) restaurante em [west](location) parte da cidade
+- o que sabe sobre comida [indian](cuisine)
+- parte [south](location) da cidade
+- o que sabe sobre comida [turkish](cuisine)
+- sim, estou procurando por um restaurante [cheap](price)
+- um restaurante [moderate](price) na parte [west](location) da cidade
 - um [english](cuisine)
-- im looking for [tuscan](cuisine) food
+- estou procurando por comida [tuscan](cuisine)
 - i need a [moderately](price:moderate) priced restaurant in the [west](location) part of town
 - [cheap](price) restaurant in the [east](location) of town
 - id like [moderately](price:moderate) priced [moroccan](cuisine) food
