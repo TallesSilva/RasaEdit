@@ -59,8 +59,8 @@ templates:
       buttons:
       - title: "barato"
         payload: "barato"
-      - title: "expansivo"
-        payload: "expansivo"
+      - title: "caro"
+        payload: "caro"
   utter_on_it:
     - text: "Estou trabalhando nisso"
 

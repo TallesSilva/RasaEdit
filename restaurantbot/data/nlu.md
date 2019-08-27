@@ -72,8 +72,8 @@
 
 
 ## intent:inform
-- [afghan](cuisine) comida
-- que tal [asian oriental](cuisine)
+- [afegão](cuisine) comida
+- que tal comida [asiatica](cuisine)
 - estou procurando por [moderately](price:moderate) restaurante em [east](location) parte da cidade
 - encontrar [moderately](price:moderate) restaurante em [west](location) parte da cidade
 - o que sabe sobre comida [indian](cuisine)
@@ -83,10 +83,10 @@
 - um restaurante [moderate](price) na parte [west](location) da cidade
 - um [english](cuisine)
 - estou procurando por comida [tuscan](cuisine)
-- i need a [moderately](price:moderate) priced restaurant in the [west](location) part of town
-- [cheap](price) restaurant in the [east](location) of town
-- id like [moderately](price:moderate) priced [moroccan](cuisine) food
-- im looking for an [expensive](price) restaurant in the [east](location) town
+- eu preciso de um restaurante com preço [moderately](price:moderate) na parte [west](location) da cidade
+- restauraten [cheap](price) na parte [east](location) da cidade
+- eu gosto de preço [moderately](price:moderate) de comida [moroccan](cuisine)
+- estou procurando por um restaurante [caro](price) restaurant in the [east](location) town
 - [moderately](price:moderate) priced food
 - restaurant [north](location) part of town [seafood](cuisine)
 - [moderately](price:moderate) priced restaurant in the [south](location) part of town
