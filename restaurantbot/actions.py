@@ -12,13 +12,13 @@ class ActionSearchRestaurants(Action):
         return "action_search_restaurants"
 
     def run(self, dispatcher, tracker, domain):
-        dispatcher.utter_message("looking for restaurants")
+        dispatcher.utter_message("looking for restaurants") # o serviço chega nessa função
         restaurant_api = RestaurantAPI()
         restaurants = restaurant_api.search(tracker.get_slot("cuisine"))
         return [SlotSet("matches", restaurants)]
 
 
-class ActionSuggest(Action):
+class ActionSuggest(Action): #nao chegou aqui
     def name(self):
         return "action_suggest"
 

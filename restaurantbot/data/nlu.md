@@ -1,38 +1,38 @@
 ## intent:affirm
 - uh, estou procurando um restaurante barato na parte oeste da cidade
-- Sim, um restaurante barato que ofereça comida internacional
+- estou, um restaurante barato que ofereça comida internacional
 - correto
-- sim
+- estou
 - um restaurante que tenha comida dinamarquesa
 - vamos fazer isso
-- sim, que tenha comida coreana
-- sim, posso encontrar comida sueca em qualquer area
-- sim, eu gostaria de um restaurante caro na paste oeste da cidade
-- sim, um restaurate barato
-- sim, eles servem comida koreana
-- sim, batendo
-- sim, comida italianaa
-- sim, um preço moderado
+- estou, que tenha comida coreana
+- estou, posso encontrar comida sueca em qualquer area
+- estou, eu gostaria de um restaurante caro na paste oeste da cidade
+- estou, um restaurante barato
+- estou, eles servem comida koreana
+- estou, batendo
+- estou, comida italianaa
+- estou, um preço moderado
 - isto é comida gastropub
-- sim, estou procurando comida barata de um restaurate mediterraneo
-- sim, posso encontrar um restaurante na parte leste da cidade que serve comida chinesa?
-- sim, estou procurando por comida malaysian
+- estou, estou procurando comida barata de um restaurante mediterraneo
+- estou, posso encontrar um restaurante na parte leste da cidade que serve comida chinesa?
+- estou, estou procurando por comida malaysian
 - certo
-- sim, eu estou na parte leste da cidade agora e estou procurando qualquer lugar que serve comida indonésia
-- sim, eu preciso para a parte sul da cidade
-- sim, certo
-- sim e eu não me importo com a faixa de preço
-- sim, eu preciso encontrar
-- sim, eu preciso para a parte norte da cidade
-- sim, estou procurando um restaurante na parte sul da cidade e que server comida kosher
+- estou, eu estou na parte leste da cidade agora e estou procurando qualquer lugar que serve comida indonésia
+- estou, eu preciso para a parte sul da cidade
+- estou, certo
+- estou e eu não me estou
+- estou, eu preciso encontrar
+- estou, eu preciso para a parte norte da cidade
+- estou, estou procurando um restaurante na parte sul da cidade e que server comida kosher
 - obrigado e até logo
 - posso ter
-- sim e em francês por favor
-- sim, posso encontrar um restaurante de comida brasileira e preço moderado
-- sim, na parte oeste da cidade
-- sim, comida barbecue
+- estou e em francês por favor
+- estou, posso encontrar um restaurante de comida brasileira e preço moderado
+- estou, na parte oeste da cidade
+- estou, comida barbecue
 - eu amo isso
-- sim, um restaurante espanhol
+- estou, um restaurante espanhol
 
 ## intent:deny
 - não, comida dinamarquesa
@@ -58,20 +58,20 @@
 - não, comida de halal
 - não, comida hungara
 - não, centro
-- não, isso não funciona pra mim
+- não, isso não funciona pra mestou
 - não, thai
 
 ## intent:greet
 - Olá
-- oi
-- tudo bem ?
-- oi bot
+- Oi
+- Tudo bem ?
+- Oi bot
 - Bom dia
 - Boa tarde
 - Boa noite
 
 
-## intent:inform
+## intent:inporm
 - comida [afegã](cozinha)
 - que tal comida [asiatica](cozinha)
 - estou procurando por [moderado](preço:moderado) um restaurante na parte [leste](localização) da cidade
@@ -79,7 +79,7 @@
 - o que sabe sobre comida [indian](cozinha)
 - parte [sul](localização) da cidade
 - o que sabe sobre comida [turca](cozinha)
-- sim, estou procurando por um restaurante [barato](preço)
+- estou, estou procurando por um restaurante [barato](preço)
 - um restaurante [moderado](preço) na parte [oeste](localização) da cidade
 - comida [inglesa](cozinha)
 - estou procurando por comida [tuscan](cozinha)
@@ -106,41 +106,41 @@
 - [sul](localização)
 - estou procurando por um restaurante [caro](preço)
 - estou procurando por um restaurante [barato](preço)
-- estou procurando por comida [world](cozinha)
+- estou procurando por comida [mundo](cozinha)
 - estou procurando por comida [francesa](cozinha)
 - o que voce sabe sobre comida [indian](cozinha)
 - posso comer comida [chinesa](cozinha)
 - comida [irish](cozinha)
-- estou procurando por um restaurate na parte [oeste](localização) da cidade servindo comida [italiana](cozinha)
+- estou procurando por um restaurante na parte [oeste](localização) da cidade servindo comida [italiana](cozinha)
 - restaurante na parte [sul](localização) da cidade e comida [inglesa](cozinha)
 - comida [spanish](cozinha)
-- ionde encontrar comida [portuguesa](cozinha) e [barata](preço)
+- onde encontrar comida [portuguesa](cozinha) e que seja [barata](preço)
 - [german](cozinha)
 - eu preciso de um restaurante com preço [moderado](preço:moderado) na parte [norte](localização) da cidade
 - [korean](cozinha)
 - estou procurando por comida [romana](cozinha) com preço [caro](preço)
 - eu procuro por um restaurante de preço [moderado](preço:moderado) e que tenha comida [canapes](cozinha)
-- Estou procurando comida com preço [moderado](preço:moderado)
+- estou procurando comida com preço [moderado](preço:moderado)
 - procurando por comida com preço [moderado](preço:moderado)
 - eu gosto de restaurante com preço [caro](preço)
 - [gastropub](cozinha)
-- i want a restaurante that serves [francesa](cozinha) comida
-- restaurante [norte](localização) parte da cidade fast comida
-- how about [modern europeu](cozinha) type dacomida
-- im looking for a restaurante on the [leste](localização) parte da cidade that serves scandinavia comida
-- the [oeste](localização) parte da cidade
-- i want to find a [barato](preço) restaurante and it should serve [escandinava](cozinha) comida
-- how [europeu](cozinha)
-- how about [europeu](cozinha) comida
-- looking for something [moderado](preço:moderado) preço in the [norte](localização) side da cidade
-- the [sul](localização) parte da cidade id gosto a restaurante that serves [tradicional](cozinha) comida
-- i need a [barato](preço) restaurante that serves [indonesian](cozinha) comida
+- Eu procuro por um restaurande de comida [francesa](cozinha)
+- restaurante na parte [norte](localização) da cidade
+- o que voce sabe sobre comida [moderna europeia](cozinha)
+- estou procurando por um restaurante na parte [leste](localização) da cidade que serve [escandinava](cozinha)
+- parte [oeste](localização) da cidade
+- eu procuro por um restaurante com preço [barato](preço) e que serve comida do tipo [escandinava](cozinha)
+- comida [europeia](cozinha)
+- como saber sobre comida [europeu](cozinha)
+- procuro por comida com preço [moderado](preço:moderado) no [norte](localização) da cidade
+- O [sul](localização) tem restaurante de comida [tradicional](cozinha)
+- eu preciso de comida [barata](preço) em um restaurante que serve comida do tipo [indonesia](cozinha)
 - [modern europeu](cozinha)
-- id gosto to find a [moderado](preço:moderado) preço restaurante in the [leste](localização) parte da cidade
-- looking for a [moderado](preço:moderado) preço restaurante that serves [brasileira](cozinha)
+- eu gosto de comida [moderada](preço:moderado) em um restaurante na parte [leste](localização) da cidade
+- procurando por a [moderado](preço:moderado) preço restaurante that serves [brasileira](cozinha)
 - i would gosto [modern europeu](cozinha) comida
-- hi looking for a [moderado](preço:moderado) preço restaurante
-- looking for a restaurante that serves [lebanese](cozinha) comida
+- oi, procurando por a [moderado](preço:moderado) preço restaurante
+- procurando por a restaurante that serves [lebanese](cozinha) comida
 - [leste](localização) parte da cidade
 - [oeste](localização)
 - [barato](preço) restaurante in the [oeste](localização) parte da cidade
@@ -150,40 +150,40 @@
 - i want an [caro](preço) restaurante that serves [polish](cozinha) comida
 - id gosto an [caro](preço) [thai](cozinha) restaurante
 - i want to find a [moderado](preço:moderado) preço restaurante that serves [moroccan](cozinha) comida
-- [afghan](cozinha)
+- [afegã](cozinha)
 - [caro](preço) restaurante [scottish](cozinha) comida
 - how about [vietnamese](cozinha)
-- hi im looking for [mexican](cozinha) comida
+- oi, estou procurando por  comida [mexicana](cozinha)
 - can i have a [moderado](preço:moderado) preço restaurante
 - how about [indian](cozinha) type dacomida
 - i would gosto a [barato](preço) restaurante in the [norte](localização) parte da cidade
 - a [barato](preço) restaurante in the [oeste](localização) parte da cidade
 - [polynesian](cozinha) comida
-- [mexican](cozinha)
-- looking for a [barato](preço) restaurante in the [sul](localização) parte da cidade
-- instead could it be for [four](pessoas:4) pessoas
+- [mexicana](cozinha)
+- procurando por a [barato](preço) restaurante in the [sul](localização) parte da cidade
+- instead could it be por [four](pessoas:4) pessoas
 - restaurante any area [japonesa](cozinha) comida
-- im looking for a restaurante in the [norte](localização) parte da cidade
+- estou procurando por a restaurante in the [norte](localização) parte da cidade
 - what about [thai](cozinha) comida
 - how about [asian oriental](cozinha) comida
-- im looking for a restaurante that serves [japonesa](cozinha) comida
-- im looking for a restaurante in the [norte](localização) parte da cidade that serves [belgica](cozinha) comida
-- im looking for a restaurante that serves [turca](cozinha) comida
-- restaurante in [oeste](localização) parte da cidade serving [corsica](cozinha) comida
-- [moderado](preço:moderado) preço serving gastro pub
-- is there a restaurante serving [britanica](cozinha) comida
-- [world](cozinha) comida
-- im looking for something serves [japonesa](cozinha) comida
-- im looking for an [caro](preço) restaurante and it should be in the [sul](localização) parte da cidade
-- id gosto a [greek](cozinha) restaurante in the [leste](localização) parte da cidade
-- im looking for an [caro](preço) restaurante serving [malaysian](cozinha) comida
-- i want to find a restaurante serving [world](cozinha) comida
-- im looking for a restaurante in the [sul](localização) parte da cidade that serves pan asian comida
-- looking for an [caro](preço) restaurante that serves [afghan](cozinha) comida
-- actually i would prefer in [madrid](localização)
+- estou procurando por a restaurante that serves [japonesa](cozinha) comida
+- estou procurando por a restaurante in the [norte](localização) parte da cidade that serves [belgica](cozinha) comida
+- estou procurando por a restaurante that serves [turca](cozinha) comida
+- restaurante na parte [oeste](localização) da cidade servindo comida [corsica](cozinha)
+- preço [moderado](preço:moderado) serving [gastropub](cozinha)
+- um restaurante servindo comida [britanica](cozinha)
+- [world](cozinha)
+- estou procurando por algo servindo [japonesa](cozinha)
+- estou procurando por um restaurante [caro](preço) e que se localiza no [sul](localização) da cidade
+- eu gosto de restaurante [greek](cozinha) na parte [leste](localização) da cidade
+- estou procurando por um restaurante [caro](preço) servindo [malaysian](cozinha)
+- estou procurando um restaurante que serve comida [world](cozinha)
+- estou procurando por um restaurante no [sul](localização) que serve comida [persian](cozinha)
+- procurando por um restaurante [caro](preço) que serve comida [afegã](cozinha)
+- atualmente  eu estou preferindo comida de [madrid](localização)
 - what is a good [barato](preço) restaurante that serves [portuguesa](cozinha) comida
 - [asian oriental](cozinha) comida
-- im looking for a restaurante that serves [russian](cozinha) comida
+- estou procurando por a restaurante that serves [russian](cozinha) comida
 - [corsica](cozinha)
 - id gosto an [caro](preço) restaurante that serves mediteranean comida
 - [moderado](preço:moderado) preço in [sul](localização) parte
@@ -191,15 +191,15 @@
 - [norte](localização)
 - [asian oriental](cozinha)
 - restaurante in the [leste](localização) parte da cidade serving [basque](cozinha) comida
-- i am looking for a [barato](preço) restaurante and it should be in the [oeste](localização) parte da cidade
+- i am procurando por a [barato](preço) restaurante and it should be in the [oeste](localização) parte da cidade
 - [moderado](preço) preço
 - how about [italiana](cozinha)
-- looking for [spanish](cozinha) comida in the center da cidade
-- hi im looking for a [moderado](preço:moderado) preço restaurante
-- im looking for a restaurante in any area it should serve [gastropub](cozinha) comida
+- procurando por [spanish](cozinha) comida in the center da cidade
+- oi, estou procurando por a [moderado](preço:moderado) preço restaurante
+- estou procurando por a restaurante in any area it should serve [gastropub](cozinha) comida
 - [welsh](cozinha) comida
 - i want [vegetarian](cozinha) comida
-- im looking for [swedish](cozinha) comida
+- estou procurando por [swedish](cozinha) comida
 - um how about [chinesa](cozinha) comida
 - a restaurante in the [leste](localização) parte da cidade that serves [caribbean](cozinha) comida
 - i need a restaurante in the [leste](localização) parte da cidade
@@ -214,84 +214,84 @@
 - [barato](preço) restaurante that serves [vegetarian](cozinha) comida
 - what about [italiana](cozinha)
 - how about [portuguesa](cozinha) comida
-- im looking for an [caro](preço) restaurante serving [francesa](cozinha) comida
-- looking for a [moderado](preço:moderado) preço restaurante and it needs to be in the [sul](localização) parte da cidade
+- estou procurando por an [caro](preço) restaurante serving [francesa](cozinha) comida
+- procurando por a [moderado](preço:moderado) preço restaurante and it needs to be in the [sul](localização) parte da cidade
 - [sul](localização) parte
 - i would gosto to find a [moderado](preço:moderado) preço restaurante in the [norte](localização) parte da cidade
 - [tuscan](cozinha) comida
 - how about uh [gastropub](cozinha)
-- im looking for a restaurante in the [leste](localização) parte that serves [creative](cozinha) comida
-- im looking for a restaurante in the [sul](localização) parte da cidade that serves [malaysian](cozinha) comida
-- i'd gosto to book a table for [two](pessoas:2) in [madrid](localização) with [spanish](cozinha) cozinha in a [moderado](preço:mid) preço range
+- estou procurando por a restaurante in the [leste](localização) parte that serves [creative](cozinha) comida
+- estou procurando por a restaurante in the [sul](localização) parte da cidade that serves [malaysian](cozinha) comida
+- i'd gosto to book a table por [two](pessoas:2) in [madrid](localização) with [spanish](cozinha) cozinha in a [moderado](preço:mid) preço range
 - i need a [barato](preço) restaurante in the [oeste](localização) parte da cidade
-- im looking for a restaurante that serves [unusual](cozinha) comida
-- im looking for a restaurante in the [sul](localização) parte da cidade and [danish](cozinha) comida
+- estou procurando por a restaurante that serves [unusual](cozinha) comida
+- estou procurando por a restaurante in the [sul](localização) parte da cidade and [danish](cozinha) comida
 - how about [spanish](cozinha) comida
-- im looking for a [barato](preço) restaurante and it should be in the [sul](localização) parte da cidade
-- im looking for a [barato](preço) restaurante that serves [vietnamese](cozinha) comida
+- estou procurando por a [barato](preço) restaurante and it should be in the [sul](localização) parte da cidade
+- estou procurando por a [barato](preço) restaurante that serves [vietnamese](cozinha) comida
 - [spanish](cozinha)
-- im looking for a restaurante serving [romana](cozinha) comida
-- im looking for [lebanese](cozinha) comida
+- estou procurando por a restaurante serving [romana](cozinha) comida
+- estou procurando por [lebanese](cozinha) comida
 - i need a [moderado](preço:moderado) preço restaurante in the [norte](localização) parte da cidade
-- im looking for a restaurante serving [international](cozinha) comida
-- im looking for a restaurante in the center that serves [turca](cozinha) comida
+- estou procurando por a restaurante serving [international](cozinha) comida
+- estou procurando por a restaurante in the center that serves [turca](cozinha) comida
 - [norte american](cozinha)
-- hello im looking for an [caro](preço) restaurante
+- hello estou procurando por an [caro](preço) restaurante
 - instead could it be with [indian](cozinha) cozinha
 - [caro](preço)
-- im looking for a [thai](cozinha) restaurante
-- want something in the [sul](localização) side da cidade thats [moderado](preço:moderado) preço
-- im looking for [moroccan](cozinha) comida
-- looking for [barato](preço) barbecue comida
+- estou procurando por a [thai](cozinha) restaurante
+- want sometoi,ng in the [sul](localização) side da cidade thats [moderado](preço:moderado) preço
+- estou procurando por [moroccan](cozinha) comida
+- procurando por [barato](preço) barbecue comida
 - [oeste](localização) parte da cidade
 - how about an caro restaurante that serves [europeu](cozinha) comida
 - we will be [eight](pessoas:8)
-- im looking for [greek](cozinha) comida
+- estou procurando por [greek](cozinha) comida
 - find me a barato [vietnamese](cozinha) restaurante
 - serves [halal](cozinha) comida
 - [international](cozinha) comida in the [leste](localização) parte da cidade
 - [sul](localização) da cidade
-- im looking for something [barato](preço)
-- im looking for a restaurante in the [leste](localização) parte da cidade serving [catalan](cozinha) comida
+- estou procurando por sometoi,ng [barato](preço)
+- estou procurando por a restaurante in the [leste](localização) parte da cidade serving [catalan](cozinha) comida
 - i need a restaurante in the [oeste](localização) parte da cidade
 - [moderado](preço) restaurante [kosher](cozinha) comida
 - what about the [oeste](localização) parte da cidade
-- hi im looking for a [moderado](preço:moderado) preço restaurante in the [oeste](localização) parte da cidade
+- oi, estou procurando por a [moderado](preço:moderado) preço restaurante in the [oeste](localização) parte da cidade
 - the [indian](cozinha) comida
-- looking for an [caro](preço) restaurante in the [sul](localização) parte da cidade
+- procurando por an [caro](preço) restaurante in the [sul](localização) parte da cidade
 - uh a restaurante in the [sul](localização) parte da cidade
 - i want [malaysian](cozinha) comida in any area
 - hello [chinesa](cozinha) type dacomida
 - id gosto to find a restaurante that serves [korean](cozinha) comida
-- looking for a restaurante in the [sul](localização) parte da cidade that serves [australian](cozinha) comida
+- procurando por a restaurante in the [sul](localização) parte da cidade that serves [australian](cozinha) comida
 - uh how about [italiana](cozinha)
 - [greek](cozinha) comida
-- im looking for a [barato](preço) restaurante serving [modern europeu](cozinha) type dacomida
-- yea im looking for a really [barato](preço) restaurante in the [leste](localização) parte da cidade
+- estou procurando por a [barato](preço) restaurante serving [modern europeu](cozinha) type dacomida
+- yea estou procurando por a really [barato](preço) restaurante in the [leste](localização) parte da cidade
 - i love [indian](cozinha) comida
 - how about [korean](cozinha) comida
 - [barato](preço) [europeu](cozinha) comida
-- hi im looking for an [caro](preço) restaurante in the [sul](localização) parte da cidade
-- im looking for [belgica](cozinha) comida
+- oi, estou procurando por an [caro](preço) restaurante in the [sul](localização) parte da cidade
+- estou procurando por [belgica](cozinha) comida
 - i want to find a restaurante in the [norte](localização) parte da cidade
 - how about [gastropub](cozinha) comida
 - [mediterranean](cozinha) comida
 - [venetian](cozinha) comida
 - [moderado](preço) restaurante [sul](localização) parte da cidade
 - ah [centre](localização)
-- im looking for a [barato](preço) pan asian comida
+- estou procurando por a [barato](preço) pan asian comida
 - how about [chinesa](cozinha) comida
-- looking for [lebanese](cozinha) comida in the city center
+- procurando por [lebanese](cozinha) comida in the city center
 - [singaporean](cozinha) comida
 - [leste](localização)
-- looking for a [barato](preço) restaurante that serves steak house comida
+- procurando por a [barato](preço) restaurante that serves steak house comida
 - um what about [europeu](cozinha)
 - uh how about [norte american](cozinha)
-- actually i would prefer for [eight](pessoas:8) pessoas
+- atualmente  i would prefiro por [eight](pessoas:8) pessoas
 - [barato](preço) preço range
 - [belgica](cozinha) comida
 - i need a [barato](preço) restaurante in the [leste](localização) parte da cidade
-- im looking for an [caro](preço) restaurante that serves [irish](cozinha) comida
+- estou procurando por an [caro](preço) restaurante that serves [irish](cozinha) comida
 - [escandinava](cozinha) comida
 - what about in the [oeste](localização) area
 - on the [sul](localização) parte da cidade
@@ -300,68 +300,68 @@
 - how about [international](cozinha) comida
 - uh okay how about [francesa](cozinha) comida
 - id gosto a [moderado](preço:moderado) preço restaurante in the [oeste](localização) parte da cidade
-- im looking for a restaurante in the [oeste](localização) parte da cidade that serves [moroccan](cozinha) comida
+- estou procurando por a restaurante in the [oeste](localização) parte da cidade that serves [moroccan](cozinha) comida
 - [caro](preço) restaurante [leste](localização) parte da cidade
 - um i dont care i just want [tradicional](cozinha) comida
 - okay is there any [portuguesa](cozinha) comida
 - how about [francesa](cozinha)
-- im looking for [japonesa](cozinha) comida
+- estou procurando por [japonesa](cozinha) comida
 - i want a [barato](preço) restaurante that serves [unusual](cozinha) comida
 - what about [chinesa](cozinha) comida
 - how about [inglesa](cozinha) comida in the norte parte da cidade
 - [turca](cozinha)
 - how about [mediterranean](cozinha) comida
 - [francesa](cozinha)
-- actually i would prefer for [six](pessoas:6) pessoas
+- atualmente  i would prefiro por [six](pessoas:6) pessoas
 - uh [italiana](cozinha)
 - [cantonese](cozinha) comida
-- im looking for a restaurante that serves [african](cozinha) comida
+- estou procurando por a restaurante that serves [african](cozinha) comida
 - um [moderado](preço)
 - [danish](cozinha) comida
 - [brasileira](cozinha) comida
-- lets see im looking for a restaurante in the [norte](localização) parte da cidade that serves [vietnamese](cozinha) comida
+- lets see estou procurando por a restaurante in the [norte](localização) parte da cidade that serves [vietnamese](cozinha) comida
 - [venetian](cozinha)
 - i want a restaurante serving [greek](cozinha) comida
-- can you book a table in [london](localização) in a [caro](preço:hi) preço range with [spanish](cozinha) cozinha for [two](pessoas:2)
+- can you book a table in [london](localização) in a [caro](preço:oi,) preço range with [spanish](cozinha) cozinha por [two](pessoas:2)
 - [italiana](cozinha) comida
-- im looking for a restaurante in the [sul](localização) parte da cidade serving [austrian](cozinha) comida
-- a restaurante with [afghan](cozinha) comida
-- im looking for [tradicional](cozinha) comida
-- im looking for an [caro](preço) restaurante
+- estou procurando por a restaurante in the [sul](localização) parte da cidade serving [austrian](cozinha) comida
+- a restaurante with [afegã](cozinha) comida
+- estou procurando por [tradicional](cozinha) comida
+- estou procurando por an [caro](preço) restaurante
 - can i find an [caro](preço) restaurante that serves [tradicional](cozinha) comida
 - [vietnamese](cozinha) comida
-- anything [caro](preço)
+- anytoi,ng [caro](preço)
 - i want to find a [barato](preço) re
-- im looking for a restaurante in the center da cidade that serves [african](cozinha) comida
+- estou procurando por a restaurante in the center da cidade that serves [african](cozinha) comida
 - is there a restaurante that has [britanica](cozinha) comida
-- im looking for a restaurante in the [leste](localização) parte da cidade that serves [tradicional](cozinha) comida
+- estou procurando por a restaurante in the [leste](localização) parte da cidade that serves [tradicional](cozinha) comida
 - [japonesa](cozinha)
 - [italiana](cozinha)
 - [hungarian](cozinha) comida
 - in the [sul](localização) parte da cidade
 - un [unusual](cozinha) comida
-- im looking for an [italiana](cozinha) restaurante in the [leste](localização) parte da cidade
+- estou procurando por an [italiana](cozinha) restaurante in the [leste](localização) parte da cidade
 - [polynesian](cozinha)
 - [christmas](cozinha) comida
 - [korean](cozinha)
-- im looking for a [moderado](preço:moderado) preço restaurante serving [fusion](cozinha) comida
-- looking for a [moderado](preço:moderado) preço restaurante that serves [unusual](cozinha) comida
-- is there anything in the [barato](preço) preço range
+- estou procurando por a [moderado](preço:moderado) preço restaurante serving [fusion](cozinha) comida
+- procurando por a [moderado](preço:moderado) preço restaurante that serves [unusual](cozinha) comida
+- is there anytoi,ng in the [barato](preço) preço range
 - the [leste](localização)
 - oh i need to be in the [norte](localização)
 - how about [turca](cozinha) comida
 - i want a restaurante in the [norte](localização) parte da cidade that serves [vietnamese](cozinha) comida
-- actually i would prefer in [bombay](localização)
+- atualmente  i would prefiro in [bombay](localização)
 - how about [italiana](cozinha) type dacomida
-- im looking for a [moderado](preço:moderado) preço restaurante and it should serve [polynesian](cozinha) comida
+- estou procurando por a [moderado](preço:moderado) preço restaurante and it should serve [polynesian](cozinha) comida
 - [polish](cozinha) comida
 - i want to find a [moderado](preço:moderado) preço restaurante in the [leste](localização) parte cidade
-- im looking for a restaurante in the [oeste](localização) parte da cidade that serves canape comida
-- looking for a [barato](preço) restaurante that serves [creative](cozinha) comida
-- im looking for a restaurante in the [leste](localização) parte dathe cidade with [indian](cozinha) asian comida
+- estou procurando por a restaurante in the [oeste](localização) parte da cidade that serves canape comida
+- procurando por a [barato](preço) restaurante that serves [creative](cozinha) comida
+- estou procurando por a restaurante in the [leste](localização) parte dathe cidade with [indian](cozinha) asian comida
 - [thai](cozinha)
 - how about [persian](cozinha) comida
-- im looking for a [moderado](preço:moderado) preço restaurante that serves [tuscan](cozinha) comida
+- estou procurando por a [moderado](preço:moderado) preço restaurante that serves [tuscan](cozinha) comida
 - [barato](preço) restaurante
 - how about [britanica](cozinha) type comida
 - [oeste](localização) da cidade
@@ -375,7 +375,7 @@
 - ok what about [indian](cozinha)
 - [moderado](preço:moderado) preço restaurante in the [oeste](localização) parte da cidade
 - [sul](localização) [caro](preço)
-- im looking for a restaurante in the [leste](localização) parte da cidade
+- estou procurando por a restaurante in the [leste](localização) parte da cidade
 - um in the [leste](localização) parte da cidade
 - how about [gastropub](cozinha) type dacomida
 - uh what about [portuguesa](cozinha) comida
@@ -383,27 +383,27 @@
 - what about [vietnamese](cozinha) comida
 - i want to find a restaurante that serves [world](cozinha) comida
 - [moderado](preço) preço range please
-- im looking for [moderado](preço:moderado) preço restaurante serving [austrian](cozinha) comida
-- i am looking for a restaurante serving [afghan](cozinha) comida
+- estou procurando por [moderado](preço:moderado) preço restaurante serving [austrian](cozinha) comida
+- i am procurando por a restaurante serving [afegã](cozinha) comida
 - i would gosto a restaurante that serves [korean](cozinha) comida
 - restaurante in the [norte](localização) parte da cidade that serves [hungarian](cozinha) comida
 - the [sul](localização)
 - how about [modern europeu](cozinha)
 - i want to find a restaurante in the center and it should serve [lebanese](cozinha) comida
 - [chinesa](cozinha)
-- im looking a restaurante in the [leste](localização) parte da cidade
-- im looking for a [barato](preço) restaurante with [spanish](cozinha) comida
+- estou procurando a restaurante in the [leste](localização) parte da cidade
+- estou procurando por a [barato](preço) restaurante with [spanish](cozinha) comida
 - [greek](cozinha)
 - [norte](localização) parte da cidade serving [gastropub](cozinha) comida
 - is there one that serves [indian](cozinha) comida
 - [unusual](cozinha) comida
-- im looking for a [barato](preço) restaurante in the [oeste](localização) parte da cidade
-- im looking for a restaurante that serves [polynesian](cozinha) comida
+- estou procurando por a [barato](preço) restaurante in the [oeste](localização) parte da cidade
+- estou procurando por a restaurante that serves [polynesian](cozinha) comida
 - [moderado](preço:moderado) restaurante
 - what about [asian oriental](cozinha)
 - [barato](preço) restaurante [norte](localização) parte da cidade
-- iam looking for an [caro](preço) restaurante and it should be in the [sul](localização) parte da cidade
-- looking for a [japonesa](cozinha) restaurante in the center
+- iam procurando por an [caro](preço) restaurante and it should be in the [sul](localização) parte da cidade
+- procurando por a [japonesa](cozinha) restaurante in the center
 - what about [portuguesa](cozinha) comida
 - fancy restaurante [moroccan](cozinha) comida
 - what about [britanica](cozinha) comida
@@ -411,7 +411,7 @@
 - what about [indian](cozinha)
 - [moderado](preço:moderado)
 - i need a restaurante in the center da cidade that includes [international](cozinha) comida
-- im looking for an [caro](preço) restaurante and it should be [leste](localização) parte da cidade
+- estou procurando por an [caro](preço) restaurante and it should be [leste](localização) parte da cidade
 - [hungarian](cozinha)
 - the [sul](localização) parte
 - how about an [indian](cozinha) restaurante in the norte parte da cidade
@@ -421,18 +421,18 @@
 - [world](cozinha)
 - [barato](preço) restaurante [leste](localização) parte da cidade
 - the [leste](localização) parte da cidade
-- im looking for a [moderado](preço:moderado) preço restaurante that serves [europeu](cozinha) comida
+- estou procurando por a [moderado](preço:moderado) preço restaurante that serves [europeu](cozinha) comida
 - [crossover](cozinha) comida
-- im looking for a [moderado](preço:moderado) preço restaurante
+- estou procurando por a [moderado](preço:moderado) preço restaurante
 - i need a [moderado](preço:moderado) preço restaurante in the [sul](localização) parte da cidade
 - [caro](preço) europeu comida
 - uh [indian](cozinha)
-- im looking for something [moderado](preço:moderado) preço
+- estou procurando por sometoi,ng [moderado](preço:moderado) preço
 - what about [international](cozinha) comida
 - um in the [sul](localização) parte da cidade and its [barato](preço)
 - i would gosto to find a restaurante in the center and it should serve [korean](cozinha) comida
 - dont care [caro](preço)
-- im looking for [moderado](preço:moderado) preço restaurante and it should serve [halal](cozinha) comida
+- estou procurando por [moderado](preço:moderado) preço restaurante and it should serve [halal](cozinha) comida
 - system [europeu](cozinha) comida
 - i would gosto [europeu](cozinha) comida
 - how about [korean](cozinha) foo
@@ -440,43 +440,43 @@
 - i want to find a [barato](preço) restaurante and it should be in the [leste](localização) parte da cidade
 - a [moderado](preço:moderado) preço restaurante in the [sul](localização) parte da cidade
 - what about [modern europeu](cozinha) type comida
-- im looking for a restaurante in the center parte da cidade that serves [europeu](cozinha) comida
+- estou procurando por a restaurante in the center parte da cidade that serves [europeu](cozinha) comida
 - [moderado](preço:moderado) preço restaurante that serves [creative](cozinha) comida
-- im looking for an [caro](preço) restaurante in the [leste](localização) parte da cidade
+- estou procurando por an [caro](preço) restaurante in the [leste](localização) parte da cidade
 - [moderado](preço:moderado) preço restaurante serving [indian](cozinha) comida
 - [tuscan](cozinha) comida [sul](localização) parte da cidade
 - [chinesa](cozinha) comida
 - i need [indian](cozinha) comida
-- may i have a table in a [moderado](preço:mid) preço range with [spanish](cozinha) comida in [bombay](localização) for [two](pessoas:2) pessoas
-- looking for an [caro](preço) restaurante that serves [indonesian](cozinha) comida
-- looking for something on the [sul](localização) side
+- may i have a table in a [moderado](preço:mid) preço range with [spanish](cozinha) comida in [bombay](localização) por [two](pessoas:2) pessoas
+- procurando por an [caro](preço) restaurante that serves [indonesia](cozinha) comida
+- procurando por sometoi,ng on the [sul](localização) side
 - id gosto to find a restaurante in the [norte](localização) parte da cidade that serves [german](cozinha) comida
-- im looking for a restaurante in any area that serves [bistro](cozinha) comida
+- estou procurando por a restaurante in any area that serves [bistro](cozinha) comida
 - can i have [greek](cozinha) comida
 - [vietnamese](cozinha)
 - [portuguesa](cozinha) comida
 - [lebanese](cozinha) comida
-- looking for an [caro](preço) restaurante
+- procurando por an [caro](preço) restaurante
 - i need a [moderado](preço:moderado) preço restaurante serving [fusion](cozinha) comida
 - can i find a restaurante that serves [international](cozinha) comida
 - i want to find a [moderado](preço:moderado) preço restaurante
 - how about [spanish](cozinha) types dacomida
 - [caribbean](cozinha) comida
 - what about a restaurante that serves [chinesa](cozinha) comida
-- im looking for a restaurante serving [asian oriental](cozinha) comida
-- can you make a restaurante reservation with [italiana](cozinha) comida for [eight](pessoas:8) in [bombay](localização) in a [caro](preço) preço range
-- im looking for an caro restaurante and it should serve [international](cozinha) comida
-- im looking for a restaurante that serves [swiss](cozinha) comida
+- estou procurando por a restaurante serving [asian oriental](cozinha) comida
+- can you make a restaurante reservation with [italiana](cozinha) comida por [eight](pessoas:8) in [bombay](localização) in a [caro](preço) preço range
+- estou procurando por an caro restaurante and it should serve [international](cozinha) comida
+- estou procurando por a restaurante that serves [swiss](cozinha) comida
 - [caro](preço) restaurante [welsh](cozinha) comida
-- im looking for an [caro](preço) restaurante in the [sul](localização) parte da cidade
-- im looking for a restaurante in the [oeste](localização) park da cidade that serves [australian](cozinha) comida
+- estou procurando por an [caro](preço) restaurante in the [sul](localização) parte da cidade
+- estou procurando por a restaurante in the [oeste](localização) park da cidade that serves [australian](cozinha) comida
 - [moderado](preço:moderado) pri
 - i want to find a restaurante in the center that serves [lebanese](cozinha) comida
 - i need a [moderado](preço) preço restaurante in the [norte](localização) parte da cidade
-- im looking for an [caro](preço) restaurante in the [leste](localização) da cidade
-- hi im looking for an restaurante in the center that serves [korean](cozinha) comida
+- estou procurando por an [caro](preço) restaurante in the [leste](localização) da cidade
+- oi, estou procurando por an restaurante in the center that serves [korean](cozinha) comida
 - [thai](cozinha) comida
-- can you make a restaurante reservation in a [barato](preço:lo) preço range in [london](localização) with [spanish](cozinha) comida for [eight](pessoas:8) pessoas
+- can you make a restaurante reservation in a [barato](preço:lo) preço range in [london](localização) with [spanish](cozinha) comida por [eight](pessoas:8) pessoas
 - [leste](localização) da cidade
 - [barato](preço) restaurante in the [sul](localização) parte da cidade
 - could i have a [barato](preço) restaurante in the [leste](localização) parte da cidade
@@ -484,31 +484,31 @@
 - uh id gosto [steakhouse](cozinha) comida
 - how about [korean](cozinha) type comida
 - i want [caro](preço) comida in the [leste](localização) parte da cidade
-- i'd gosto to book a table in a [barato](preço:lo) preço range for [six](pessoas:6) pessoas with [spanish](cozinha) cozinha in [madrid](localização)
+- i'd gosto to book a table in a [barato](preço:lo) preço range por [six](pessoas:6) pessoas with [spanish](cozinha) cozinha in [madrid](localização)
 - could i have a [moderado](preço:moderado) preço restaurante in the [sul](localização) parte da cidade
-- for a restaurante in any area with [international](cozinha) comida
+- por a restaurante in any area with [international](cozinha) comida
 - what about [modern europeu](cozinha)
 - could i have a [barato](preço) restaurante
-- im looking for a [barato](preço) restaurante in the [leste](localização) parte da cidade
+- estou procurando por a [barato](preço) restaurante in the [leste](localização) parte da cidade
 - [inglesa](cozinha) comida
 - i would gosto a [barato](preço) restaurante
-- im looking for a [barato](preço) restaurante that serves [german](cozinha) comida
+- estou procurando por a [barato](preço) restaurante that serves [german](cozinha) comida
 - [moderado](preço:moderado) preço restaurante
 - how about [portuguesa](cozinha)
-- im looking for something [caro](preço)
+- estou procurando por sometoi,ng [caro](preço)
 - how about [francesa](cozinha) comida
 - what about a [chinesa](cozinha) restaurante in the norte da cidade
 - ah [gastropub](cozinha) comida
 - [jamaican](cozinha)
 - [caro](preço) restaurante serving [portuguesa](cozinha) comida
-- im looking for [portuguesa](cozinha) comida
+- estou procurando por [portuguesa](cozinha) comida
 - [catalan](cozinha)
 - how about [turca](cozinha)
 - i need [barato](preço) [hungarian](cozinha) restaurante
 - id gosto a [barato](preço) restaurante in the [norte](localização) parte da cidade
 - i want a [moderado](preço) preço restaurante in the [sul](localização) da cidade
 - a restaurante [barato](preço) [norte](localização) parte da cidade
-- for [six](pessoas:6) please
+- por [six](pessoas:6) please
 - i need a [moderado](preço:moderado) preço restaurante that serves [world](cozinha) comida
 - id gosto to find a [barato](preço) restaurante in the [oeste](localização) parte da cidade
 - find a [barato](preço) restaurante
@@ -516,7 +516,7 @@
 - id gosto a [moderado](preço:moderado) preço restaurante that serves [cuban](cozinha) comida please
 - in the [norte](localização) parte da cidade
 - [turca](cozinha) type dacomida
-- im looking for a restaurante in any area that serves [welsh](cozinha) comida
+- estou procurando por a restaurante in any area that serves [welsh](cozinha) comida
 - [malaysian](cozinha) comida
 - how bout [chinesa](cozinha) comida
 - [caro](preço) restaurantes
@@ -526,32 +526,32 @@
 - [swiss](cozinha)
 - how about [indian](cozinha)
 - i want a restaurante in the [leste](localização) parte da cidade that serves [singaporean](cozinha) comida
-- im looking for an [caro](preço) restaurante that serves signaporean comida
+- estou procurando por an [caro](preço) restaurante that serves signaporean comida
 - what about [korean](cozinha) comida
-- im looking for a restaurante in the [norte](localização) parte da cidade that serves [african](cozinha) comida
+- estou procurando por a restaurante in the [norte](localização) parte da cidade that serves [african](cozinha) comida
 - [moderado](preço)
-- im looking for a [moderado](preço:moderado) preço restaurante in the [norte](localização) parte da cidade
+- estou procurando por a [moderado](preço:moderado) preço restaurante in the [norte](localização) parte da cidade
 - restaurante in the [oeste](localização) parte da cidade that serves [cuban](cozinha) comida
 - [europeu](cozinha) comida
 - can i get a restaurante with [vegetarian](cozinha) comida
 - i would gosto to find an [caro](preço) restaurante that serves [corsica](cozinha) comida
-- im looking for a [moderado](preço:moderado) preço restaurante that serves [tradicional](cozinha) comida
-- im looking for a [moderado](preço:moderado) preço restaurante in the [sul](localização) da cidade
+- estou procurando por a [moderado](preço:moderado) preço restaurante that serves [tradicional](cozinha) comida
+- estou procurando por a [moderado](preço:moderado) preço restaurante in the [sul](localização) da cidade
 - [moderado](preço:moderado) preço restaurante serving [moroccan](cozinha) comida
-- i am looking for a restaurante in the [sul](localização) parte da cidade and it should serve [cantonese](cozinha) comida
+- i am procurando por a restaurante in the [sul](localização) parte da cidade and it should serve [cantonese](cozinha) comida
 - uh [barato](preço) restaurante
 - [moderado](preço:moderado) preço in the [oeste](localização)
 - [indian](cozinha) type dacomida
 - i would gosto a [barato](preço) restaurante in the [oeste](localização) parte da cidade
 - i want to find a [barato](preço) restaurante
 - uh a [barato](preço) restaurante in the [leste](localização) parte da cidade
-- im looking for a restaurante in the [norte](localização) parte da cidade serving [indian](cozinha) comida
+- estou procurando por a restaurante in the [norte](localização) parte da cidade serving [indian](cozinha) comida
 - [moderado](preço:moderado) preço restaurante that serves [thai](cozinha) comida
-- im looking for a [moderado](preço:moderado) preço restaurante in the [oeste](localização) parte da cidade
-- im looking for a restaurante in the [leste](localização) parte da cidade that serves [afghan](cozinha) comida
+- estou procurando por a [moderado](preço:moderado) preço restaurante in the [oeste](localização) parte da cidade
+- estou procurando por a restaurante in the [leste](localização) parte da cidade that serves [afegã](cozinha) comida
 - [caro](preço) restaurante in the [leste](localização) parte da cidade
-- im looking for a [moroccan](cozinha) restaurante in the center da cidade
-- im looking for a [moderado](preço:moderado) preço restaurante in the [sul](localização) parte da cidade
+- estou procurando por a [moroccan](cozinha) restaurante in the center da cidade
+- estou procurando por a [moderado](preço:moderado) preço restaurante in the [sul](localização) parte da cidade
 - [britanica](cozinha) caro
 - how about [barato](preço)
 - in the [oeste](localização) parte da cidade
@@ -559,69 +559,69 @@
 - i need a [barato](preço) restaurante in the [sul](localização) parte da cidade
 - in a [moderado](preço:mid) preço range please
 - [belgica](cozinha)
-- im looking for a [moderado](preço:moderado) preço restaurante and it should be in the [norte](localização) da cidade
-- hi im looking for a [barato](preço) restaurante in the [sul](localização) parte da cidade
+- estou procurando por a [moderado](preço:moderado) preço restaurante and it should be in the [norte](localização) da cidade
+- oi, estou procurando por a [barato](preço) restaurante in the [sul](localização) parte da cidade
 - [norte american](cozinha) comida
 - how about [moderado](preço:moderado) preço thai comida
 - restaurante in any area [international](cozinha) comida
 - [asian oriental](cozinha) type dacomida
 - i want a [britanica](cozinha) restaurante in the [leste](localização) parte da cidade
 - [international](cozinha) comida
-- im looking for a restaurante in the center that serves [caribbean](cozinha) comida
+- estou procurando por a restaurante in the center that serves [caribbean](cozinha) comida
 - [caro](preço) restaurante in the [leste](localização)
 - i want [christmas](cozinha) comida
 - what about [francesa](cozinha) comida
 - [swedish](cozinha) comida
 - restaurante in the [sul](localização) parte da cidade
-- im looking for a restaurante that serves [gastropub](cozinha) comida any preço range
-- im looking for a restaurante in the [sul](localização) parte da cidade
-- im looking for a restaurante in the [leste](localização) parte da cidade thats [caro](preço)
+- estou procurando por a restaurante that serves [gastropub](cozinha) comida any preço range
+- estou procurando por a restaurante in the [sul](localização) parte da cidade
+- estou procurando por a restaurante in the [leste](localização) parte da cidade thats [caro](preço)
 - how about [vietnamese](cozinha) comida
 - with [britanica](cozinha) comida
 - id gosto an [caro](preço) restaurante
 - [moderado](preço) preço restaurante in the [norte](localização) parte da cidade
-- im looking for an [caro](preço) restaurante and it should be served [international](cozinha) comida
+- estou procurando por an [caro](preço) restaurante and it should be served [international](cozinha) comida
 - that serves [corsica](cozinha)
-- im looking for a restaurante in the [norte](localização) parte da cidade serving [malaysian](cozinha) comida
+- estou procurando por a restaurante in the [norte](localização) parte da cidade serving [malaysian](cozinha) comida
 - i need to find a restaurante in the [norte](localização) parte da cidade that serves [jamaican](cozinha) comida
-- um im looking for a restaurante in the center parte da cidade that serves [lebanese](cozinha) comida
+- um estou procurando por a restaurante in the center parte da cidade that serves [lebanese](cozinha) comida
 - what [asian oriental](cozinha) type dacomida
-- looking for a [barato](preço) restaurante in the [leste](localização) parte da cidade
+- procurando por a [barato](preço) restaurante in the [leste](localização) parte da cidade
 - [barato](preço) [jamaican](cozinha)
 - how about [asian oriental](cozinha)
 - i need a [moderado](preço:moderado) preço restaurante that serves bask comida
-- looking for an [caro](preço) restaurante in the [sul](localização) parte da cidade
+- procurando por an [caro](preço) restaurante in the [sul](localização) parte da cidade
 - [oeste](localização) side
-- looking for [afghan](cozinha) good
-- im looking for a restaurante that serves [danish](cozinha) comida
+- procurando por [afegã](cozinha) good
+- estou procurando por a restaurante that serves [danish](cozinha) comida
 - yea i would gosto [korean](cozinha) comida
-- im looking for a restaurante in the [oeste](localização) parte da cidade that serves [jamaican](cozinha) comida
-- im looking for a restaurante in central it should serve [japonesa](cozinha) comida
-- im looking for a [moderado](preço:moderado) preço restaurante that serves [vietnamese](cozinha) comida
+- estou procurando por a restaurante in the [oeste](localização) parte da cidade that serves [jamaican](cozinha) comida
+- estou procurando por a restaurante in central it should serve [japonesa](cozinha) comida
+- estou procurando por a [moderado](preço:moderado) preço restaurante that serves [vietnamese](cozinha) comida
 - restaurante in the [oeste](localização) parte da cidade that serves airitran comida
 - [britanica](cozinha) comida
 - preço over comida [oeste](localização) parte da cidade
 - restaurante [moderado](preço) preço
 - in the [leste](localização) parte da cidade
-- im looking for an [caro](preço) restaurante and it should be the [leste](localização) parte da cidade
-- looking for a [barato](preço) restaurante in the [oeste](localização) parte da cidade
+- estou procurando por an [caro](preço) restaurante and it should be the [leste](localização) parte da cidade
+- procurando por a [barato](preço) restaurante in the [oeste](localização) parte da cidade
 - i want a restaurante in the center that serves [seacomida](cozinha)
 - how about a restaurante in the leste parte da cidade that serves [indian](cozinha) comida
 - the [norte](localização)
 - i would gosto [australian](cozinha) foo
-- im looking for an [caro](preço) restaurante that serves [unusual](cozinha) comida
+- estou procurando por an [caro](preço) restaurante that serves [unusual](cozinha) comida
 - [mediterranean](cozinha)
-- im looking for a [barato](preço) restaurante in the [sul](localização) parte da cidade
+- estou procurando por a [barato](preço) restaurante in the [sul](localização) parte da cidade
 - how about [chinesa](cozinha)
 - instead could it be with [francesa](cozinha) comida
 - [sul](localização) parte da cidade please
-- im looking for a [malaysian](cozinha) restaurante in the [norte](localização) parte da cidade
-- im looking for a [moderado](preço:moderado) preço restaurante uh serving [halal](cozinha) comida
+- estou procurando por a [malaysian](cozinha) restaurante in the [norte](localização) parte da cidade
+- estou procurando por a [moderado](preço:moderado) preço restaurante uh serving [halal](cozinha) comida
 - [cuban](cozinha) comida
-- looking for [moderado](preço:moderado) preço [russian](cozinha) comida
+- procurando por [moderado](preço:moderado) preço [russian](cozinha) comida
 - id gosto a restaurante in the [sul](localização) parte da cidade
 - [moderado](preço:moderado) preço restaurante in the [leste](localização) parte da cidade
-- im looking for a restaurante in any area that serves [russian](cozinha) comida
+- estou procurando por a restaurante in any area that serves [russian](cozinha) comida
 - serving [modern europeu](cozinha) comida
 - how about [asian oriental](cozinha) type dacomida
 - i want to find a [moderado](preço:moderado) preço restaurante that serves [cuban](cozinha) comida
@@ -633,54 +633,54 @@
 - how about [thai](cozinha) comida
 - [moderado](preço) preço
 - [bistro](cozinha)
-- im looking for a [caro](preço) restaurante in the [leste](localização) parte da cidade
+- estou procurando por a [caro](preço) restaurante in the [leste](localização) parte da cidade
 - i need a [cuban](cozinha) restaurante that is [moderado](preço:moderado) preço
 - i want to find a [moderado](preço:moderado) preço restaurante and it should serve asian comida
 - what about [norte american](cozinha) type dacomida
 - [moderado](preço:moderado) preço
 - id gosto a restaurante in the [norte](localização) parte da cidade that serves cross over comida
 - i want an [caro](preço) restaurante that serves sea comida
-- im looking for a restaurante that serves [bistro](cozinha) comida
+- estou procurando por a restaurante that serves [bistro](cozinha) comida
 - [barato](preço) restaurantes
-- im looking for a [barato](preço) restaurante
+- estou procurando por a [barato](preço) restaurante
 - i want a restaurante in the [oeste](localização) parte da cidade that serves [australian](cozinha) comida
-- im looking for a restaurante in the [norte](localização) parte da cidade serving [lebanese](cozinha) comida
+- estou procurando por a restaurante in the [norte](localização) parte da cidade serving [lebanese](cozinha) comida
 - [singaporean](cozinha)
 - [barato](preço) [italiana](cozinha) comida
 - restaurante [oeste](localização) parte da cidade [danish](cozinha) comida
 - [britanica](cozinha)
-- im looking for a restaurante that serves [afghan](cozinha) comida
+- estou procurando por a restaurante that serves [afegã](cozinha) comida
 - what about [europeu](cozinha) comida
 - its a restaurante in the sul da cidade that serves [italiana](cozinha) comida
 - i need a restaurante serving [corsica](cozinha) comida
-- something serving [swiss](cozinha) comida
-- im looking for a [korean](cozinha) restaurante in the [caro](preço) preço range
+- sometoi,ng serving [swiss](cozinha) comida
+- estou procurando por a [korean](cozinha) restaurante in the [caro](preço) preço range
 - um an [caro](preço)
 - i want a restaurante in the [moderado](preço) preço range
-- im looking for a restaurante that serves [cuban](cozinha) comida
+- estou procurando por a restaurante that serves [cuban](cozinha) comida
 - i want to find a restaurante in the [norte](localização) parte da cidade
 - [gastropub](cozinha) comida
-- i am looking for an [caro](preço) restaurante that serves
+- i am procurando por an [caro](preço) restaurante that serves
 - [norte](localização) norte parte da cidade
 - a [barato](preço) restaurante in the [sul](localização) parte da cidade
 - [barato](preço)
 - [caro](preço) restaurante
 - [scottish](cozinha)
 - [fusion](cozinha) comida
-- id gosto to find a restaurante that serves [afghan](cozinha) comida
+- id gosto to find a restaurante that serves [afegã](cozinha) comida
 - uh i want [cantonese](cozinha) comida
 - i would gosto a [moderado](preço:moderado) preço restaurante in the [oeste](localização) parte da cidade
-- im looking for an [caro](preço) restaurante that serves [greek](cozinha) comida
+- estou procurando por an [caro](preço) restaurante that serves [greek](cozinha) comida
 - id gosto an [caro](preço) restaurante that serves bat comida
 - in the [leste](localização) parte
-- can you book a table in [rome](localização) in a [moderado](preço:mid) preço range with [britanica](cozinha) comida for [four](pessoas:4) pessoas
+- can you book a table in [rome](localização) in a [moderado](preço:mid) preço range with [britanica](cozinha) comida por [four](pessoas:4) pessoas
 - [barato](preço) restaurante serving unintelligible comida
 - in the [oeste](localização)
 - [creative](cozinha) comida
-- im looking for a restaurante in the [leste](localização) parte da cidade serving [japonesa](cozinha) comida
-- im looking for a restaurante in the [norte](localização) parte da cidade serving [jamaican](cozinha) comida
+- estou procurando por a restaurante in the [leste](localização) parte da cidade serving [japonesa](cozinha) comida
+- estou procurando por a restaurante in the [norte](localização) parte da cidade serving [jamaican](cozinha) comida
 - what about a [spanish](cozinha) restuarant
-- im looking for a restaurante in any area that serves [polynesian](cozinha) comida
+- estou procurando por a restaurante in any area that serves [polynesian](cozinha) comida
 - i want to find an [caro](preço) restaurante that serves [swedish](cozinha) comida
 - [europeu](cozinha) comida any preço
 - with [francesa](cozinha) cozinha
@@ -688,7 +688,7 @@
 - [barato](preço) restaurante that serves [german](cozinha) comida
 - i want a [moderado](preço:moderado) preço restaurante that serves [mediterranean](cozinha) comida
 - [african](cozinha) comida
-- im looking for a restaurante in the [sul](localização) parte da cidade serving [korean](cozinha) comida
+- estou procurando por a restaurante in the [sul](localização) parte da cidade serving [korean](cozinha) comida
 - i want to find a [caro](preço) restaurante in the [sul](localização) parte da cidade
 - i want a [moderado](preço:moderado) preço
 - [canapes](cozinha) comida
@@ -696,7 +696,7 @@
 - i need a restaurante in the center da cidade that serves [spanish](cozinha) comida
 - uh [world](cozinha) comida
 - i need a [barato](preço) restaurante
-- im looking for [thai](cozinha)
+- estou procurando por [thai](cozinha)
 
 ## intent:request_info
 - do you have their [address](info)
