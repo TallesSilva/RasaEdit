@@ -29,7 +29,7 @@ intents:
 
 templates:
   utter_greet:
-    - text: "hey there!"
+    - text: "Olá!"
   utter_goodbye:
     - text: "Adeus :("
     - text: "Até logo"
