@@ -13,11 +13,12 @@ slots:
     type: unfeaturized
 
 entities:
-- location
+- local
+- informação
+- pessoas
+- preco
+- cozinha
 - info
-- people
-- price
-- cuisine
 
 intents:
  - greet
@@ -29,10 +30,10 @@ intents:
 
 templates:
   utter_greet:
-    - text: "Olá!"
+    - text: "Ola!"
   utter_goodbye:
     - text: "Adeus :("
-    - text: "Até logo"
+    - text: "Ate logo"
   utter_default:
     - text: "default message"
   utter_ack_dosearch:
@@ -40,7 +41,7 @@ templates:
   utter_ack_findalternatives:
     - text: "Ok, deixe me ver o que mais há"
   utter_ack_makereservation:
-    - text: "Ok, fazendo reserva no restaurante (price={price} cuisine={cuisine}) no location={location} para count={people}? "
+    - text: "Ok, fazendo reserva no restaurante preco={preco} cozinha={cozinha} na local={local} para pessoas={pessoas}? "
       buttons:
         - title: "Obrigado"
           payload: "Obrigado"
@@ -51,11 +52,11 @@ templates:
   utter_ask_location:
     - text: "Onde?"
   utter_ask_moreupdates:
-    - text: "Se voce precisa que eu faça alguma alteração oode me informar. Estas são as suas informações: {location} (price: {price}, cuisine: {cuisine}) for {people} people."
+    - text: "Se voce precisar que eu faca alguma alteracao pode me informar. Estas sao as suas informacoes:  {preco}, {cozinha} para {pessoas} pessoas."
   utter_ask_numpeople:
     - text: "Para quantas pessoas?"
   utter_ask_price:
-    - text: "Em qual faixa de preço?"
+    - text: "Em qual faixa de preco?"
       buttons:
       - title: "barato"
         payload: "barato"
