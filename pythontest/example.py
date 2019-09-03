@@ -1,7 +1,8 @@
 from pymongo import MongoClient
 from faker import Faker
+from datetime import datetime
 
-fake = Faker()
+fake = Faker('pt_BR')
 client = MongoClient('localhost', 27017)
 
 db = client.Agenda
@@ -11,14 +12,17 @@ Col_Supplier = db.Supplier
 Col_Timetable = db.Timetable
 Col_Metadata = db.Metadata
 
-profile = fake.profile()
 Id = fake.bban()
+CPF = fake.cpf()
 phone = fake.phone_number()
 name = fale.name()
 address = fake.address()
+data = fake.data()
+now = datetime.now()
 
 Col_User.insert_one({
-    'Id' : Id,
+    'Id' : CPF,
+    'Name' : name,
     'Phone' : phone,
     'Retrials' : None,
     'Address' : address,
@@ -26,22 +30,25 @@ Col_User.insert_one({
 })
 
 Col_Supplier.insert_one({
-    'Id' : Id,
-    'Phone': phone,
-    'Name': name,
-    'Address' : address,
-
+    'Id' : CPF,
+    'Name': phone,
+    'Workhours': name,
+    'when' : address,
 })
 
 Col_Timetable.insert_one({
     'Id' : Id,
-    'IDSupplier': phone,
-    'IDUser': name,
-    'date' : address,
+    'IDSupplier': IDSupplier,
+    'IDUser': IDUser,
+    'date' : now.strftime("%d/%m/%Y %H:%M:%S"),
+})
+
+Col_Timetable.insert_one({
 
 })
 
 Col_Metadata.insert_one({
-
-
+    'Morning' : '7:00 até 12:00',
+    'Afternon': '13:00 até 18:00',
+    'Full': '7:00 até 12:00 e 13:00 até 18:00',
 })

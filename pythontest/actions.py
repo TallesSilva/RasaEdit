@@ -1,7 +1,6 @@
-import pymongo
-from faker import Faker
-import random
 from pymongo import MongoClient
+from faker import Faker
+from datetime import datetime
 
 class User:
     def __init__(self, id, name, phone, when, retrials, address):
