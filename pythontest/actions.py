@@ -22,7 +22,7 @@ class User:
         self.retrials = retrials #fake.name() *************
         self.address = address #fake.address()
 
-    def generate_random_user(self):
+    def generate_user(self):
         Col_User.insert_one({
             'Id' : self.id,
             'Name' : self.name,
@@ -33,20 +33,20 @@ class User:
         })
 
 class Supplier:
-    def __init__(self, id, name, workinghours, when, available):
-        self.id = id
+    def __init__(self, cpf, name, workinghours, when, available):
+        self.id = cpf
         self.name = name #fake.name()
         self.working_hours = workinghours #fake.name() *************
         self.when = when #fake.name() *************
         self.available = available #fake.address()
 
-    def generate_random_supplier(self, id, name, working_hours, when, available):
+    def generate_supplier(self):
         Col_Supplier.insert_one({
-            'Id' : CPF,
-            'Name': name,
-            'Workhours': None, #descobrir como preencher
-            'when' : None,
-            'available' : None,
+            'Id' : self.id,
+            'Name': self.name,
+            'Workhours': self.working_hours, #descobrir como preencher
+            'when' : self.when,
+            'available' : self.available,
         })
 
 class Timetable:
@@ -103,3 +103,11 @@ class Metadata:
             'Afternon': '13:00 até 18:00',
             'Full': '7:00 até 12:00 e 13:00 até 18:00',
         })
+
+
+Random_user = User(fake.cpf(), fake.name(), fake.phone_number(), None, None, fake.address())
+Random_supplier = Supplier(fake.cpf(), fake.name(), None, None, None)
+
+#Random_user.generate_user()
+#Random_supplier.generate_supplier()
+print("ok")

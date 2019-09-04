@@ -21,6 +21,10 @@ phone = fake.phone_number()
 name = fake.name()
 address = fake.address()
 now = datetime.now()
+workinghours = None
+when = None
+available = None
+
 
 Col_User.insert_one({
     'Id' : CPF,
@@ -34,23 +38,23 @@ Col_User.insert_one({
 Col_Supplier.insert_one({
     'Id' : CPF,
     'Name': name,
-    'Workhours': None, #descobrir como preencher
-    'when' : None,
-    'available' : None,
+    'Workhours': workinghours, #descobrir como preencher
+    'when' : when,
+    'available' : available,
 })
 
 Col_Timetable_Date.insert_one({
     'Id' : Id, #descobrir como linkar
     'IDSupplier': None, #descobrir como linkar
     'IDUser': None, #descobrir como linkar
-    'date' : now.strftime("%d/%m/%Y %H:%M:%S"),
+    'date' : now.strftime("%d/%m/%Y %H:%M:%S"), # perguntar ao rui qual a data da tabela
 })
 
 Col_Timetable_None.insert_one({
     'Id' : Id, #descobrir como linkar
     'IDSupplier': None, #descobrir como linkar
     'IDUser': None, #descobrir como linkar
-    'date' : None,
+    'date' : None, #perguntar ao rui qual data da tabela
 })
 
 Col_Confirmation.insert_one({
