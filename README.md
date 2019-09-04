@@ -4,7 +4,7 @@
 
 Todos os testes e exemplos estão nesse repositório.
 
-![Esboço das tabelas](https://github.com/TallesSilva/RasaEdit/blob/master/pythontest/WhatsApp%20Image%202019-08-30%20at%2015.10.20.jpeg)
+![Esboço das tabelas](https://github.com/TallesSilva/RasaEdit/blob/master/pythontest/Esbo%C3%A7o.10.20.jpeg?raw=true)
 
 ### /'kɑpiɹajt/ Kyros Tecnologia
 ### Codigo generico para testes de criação de bd usando pymongo
