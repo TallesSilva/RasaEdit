@@ -6,6 +6,7 @@ fake = Faker('pt_BR')
 client = MongoClient('localhost', 27017)
 
 db = client.Agenda
+now = datetime.now()
 
 Col_User = db.User
 Col_Supplier = db.Supplier

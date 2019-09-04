@@ -1,8 +1,13 @@
+# /'kɑpiɹajt/ Kyros Tecnologia
+# Codigo generico para testes de criação de bd usando pymongo
+# dev : TallesSilva https://github.com/TallesSilva/RasaEdit
+
 from pymongo import MongoClient
 from faker import Faker
 from datetime import datetime
 
 fake = Faker('pt_BR')
+now = datetime.now()
 client = MongoClient('localhost', 27017)
 db = client.Agenda
 Col_User = db.User
@@ -58,15 +63,15 @@ class Timetable:
 
     def generate_timetable_date(self):
         Col_Timetable_Date.insert_one({
-            'Id' : Id, #descobrir como linkar
+            'Id' : self.id,
             'IDSupplier': None, #descobrir como linkar
             'IDUser': None, #descobrir como linkar
-            'date' : now.strftime("%d/%m/%Y %H:%M:%S"),
+            'date' : self.date,
         })
 
     def generate_timetable_None(self):
         Col_Timetable_None.insert_one({
-            'Id' : Id, #descobrir como linkar
+            'Id' : self.id, #descobrir como linkar
             'IDSupplier': None, #descobrir como linkar
             'IDUser': None, #descobrir como linkar
             'date' : None,
@@ -93,21 +98,25 @@ class Confirmation:
 
 class Metadata:
     def __init__(self, morning, afternoon, full):
-        self.morning = morning,
-        self.afternoon = afternoon,
-        self.full = full,
+        self.morning = '7:00 até 12:00',
+        self.afternoon = '13:00 até 18:00',
+        self.full = '7:00 até 12:00 e 13:00 até 18:00',
 
     def generate_metadata(self):
         Col_Metadata.insert_one({
-            'Morning' : '7:00 até 12:00',
-            'Afternon': '13:00 até 18:00',
-            'Full': '7:00 até 12:00 e 13:00 até 18:00',
+            'Morning' : self.morning,
+            'Afternon': self.afternoon,
+            'Full': self.full,
         })
 
 
 Random_user = User(fake.cpf(), fake.name(), fake.phone_number(), None, None, fake.address())
 Random_supplier = Supplier(fake.cpf(), fake.name(), None, None, None)
+Random_timetable = Timetable(fake.bban(), None, None, now.strftime("%d/%m/%Y %H:%M:%S"))
 
 #Random_user.generate_user()
 #Random_supplier.generate_supplier()
+#Random_timetable.generate_timetable_None()
+#Random_timetable.generate_timetable_date()
 print("ok")
+print(now.strftime("%d/%m/%Y %H:%M:%S"))
