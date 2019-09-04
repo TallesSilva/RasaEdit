@@ -129,7 +129,7 @@ class TimeTable(Document):
     company = fields.ReferenceField('Company', required=True)
     observacao = fields.StringField(required=False)
 
-''' class Generate_Supplier(Document):
+'''class Generate_Supplier(Document):
     meta = {'strict': False}
     nome = fake.name()
     cpf = fake.cpf()
@@ -148,4 +148,5 @@ class Generate_Customer(Document):
     empresa = fields.ReferenceField('Company', required=True)
     dia_preferencia = fields.StringField(required=True)
     hora_preferencia = fields.StringField(required=True)
+
 '''
