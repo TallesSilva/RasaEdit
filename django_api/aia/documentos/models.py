@@ -38,30 +38,6 @@ class Contato(EmbeddedDocument):
     whatsapp = fields.StringField(required=False)
     telegram = fields.StringField(required=False)
 
-
-class Generate_Endereco(EmbeddedDocument):
-    meta = {'strict': False}
-
-    rua = fake.street_name()
-    numero = fake.phone_number()
-    complemento = fake.building_number()
-    bairro = fake.bairro()
-    cep = fake.postcode()
-    cidade = fake.country()
-    estado = fake.state()
-    latitude = None
-    longitude = None
-
-class Generate_Contato(EmbeddedDocument):
-    meta = {'strict': False}
-
-    fixo = fake.phone_number()
-    celular = fake.cellphone_number()
-    email = None
-    site = None
-    whatsapp = fixo
-    telegram = fixo
-
 # ------------------------------------------------------------
 
 class Template(Document):
@@ -128,24 +104,3 @@ class TimeTable(Document):
     customer = fields.ReferenceField('Customer', required=True)
     company = fields.ReferenceField('Company', required=True)
     observacao = fields.StringField(required=False)
-
-class Generate_Supplier(Document):
-    meta = {'strict': False}
-
-    nome = fake.name()
-    cpf = fake.cpf()
-    endereco = fields.EmbeddedDocumentField(Generate_Endereco, required=True)
-    empresa = fields.ReferenceField('Company', required=True)
-    cargo = fields.StringField(required=True)
-    contato = fields.EmbeddedDocumentField(Generate_Contato, required=True)
-
-class Generate_Customer(Document):
-    meta = {'strict': False}
-
-    nome = fake.name()
-    cpf = fake.name()
-    endereco = fields.EmbeddedDocumentField(Generate_Endereco, required=True)
-    contato = fields.EmbeddedDocumentField(Generate_Contato, required=True)
-    empresa = fields.ReferenceField('Company', required=True)
-    dia_preferencia = fields.StringField(required=True)
-    hora_preferencia = fields.StringField(required=True)
