@@ -83,7 +83,7 @@ DATABASES = {
     'default': {
         'ENGINE': '',
     }
-} 
+}
 
 MONGO_DATABASE_NAME = 'aia'
 MONGO_HOST = '192.168.1.242'
@@ -91,9 +91,9 @@ MONGO_USER = 'DocHand'
 MONGO_PWD = 'Doc123'
 MONGO_PORT = 27017
 
-mongoengine.connect(MONGO_DATABASE_NAME, 
-    host=MONGO_HOST, 
-    port=MONGO_PORT, 
+mongoengine.connect(MONGO_DATABASE_NAME,
+    host=MONGO_HOST,
+    port=MONGO_PORT,
     username=MONGO_USER,
     password=MONGO_PWD,
     authentication_source='admin'

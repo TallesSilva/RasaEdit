@@ -3,11 +3,24 @@ from faker import Faker
 from datetime import datetime
 
 fake = Faker('pt_BR')
-client = MongoClient('localhost', 27017)
-
-db = client.Agenda
 now = datetime.now()
 
+user = 'DocHand'
+password = 'Doc123'
+host = '27017'
+
+try:
+    # Python 3.x
+    from urllib.parse import quote_plus
+except ImportError:
+    # Python 2.x
+    from urllib import quote_plus
+
+uri = "mongodb://192.168.1.242" % (
+    quote_plus(user), quote_plus(password), host)
+client = MongoClient(uri)
+
+db = client.Agenda
 Col_User = db.User
 Col_Supplier = db.Supplier
 Col_Timetable = db.Timetable
@@ -35,7 +48,7 @@ Col_User.insert_one({
     'Address' : address,
     'when' : None,
 })
-
+'''
 Col_Supplier.insert_one({
     'Id' : CPF,
     'Name': name,
@@ -72,3 +85,4 @@ Col_Metadata.insert_one({
     'Afternon': '13:00 até 18:00',
     'Full': '7:00 até 12:00 e 13:00 até 18:00',
 })
+'''
