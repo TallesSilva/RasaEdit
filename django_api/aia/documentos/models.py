@@ -20,22 +20,22 @@ WORKHOURS = ['Manhã', 'Tarde', 'Integral']
 class Endereco(EmbeddedDocument):
     meta = {'strict': False}
 
-    rua = fields.StringField(required=True)
-    numero = fields.StringField(required=True)
+    rua = fields.StringField(required=False)
+    numero = fields.StringField(required=False)
     complemento = fields.StringField(required=False)
-    bairro = fields.StringField(required=True)
-    cep = fields.StringField(required=True)
-    cidade = fields.StringField(required=True)
-    estado = fields.StringField(required=True, choices=ESTADOS)
-    latitude = fields.StringField(required=True)
-    longitude = fields.StringField(required=True)
+    bairro = fields.StringField(required=False)
+    cep = fields.StringField(required=False)
+    cidade = fields.StringField(required=False)
+    estado = fields.StringField(required=False)
+    latitude = fields.StringField(required=False)
+    longitude = fields.StringField(required=False)
 
 class Contato(EmbeddedDocument):
     meta = {'strict': False}
 
     fixo = fields.StringField(required=False)
-    celular = fields.StringField(required=True)
-    email = fields.EmailField(required=True)
+    celular = fields.StringField(required=False)
+    email = fields.EmailField(required=False)
     site = fields.StringField(required=False)
     whatsapp = fields.StringField(required=False)
     telegram = fields.StringField(required=False)
@@ -73,8 +73,8 @@ class Supplier(Document):
     meta = {'strict': False}
 
     nome = fields.StringField(required=True)
-    cpf = fields.StringField(required=True, unique=True)
-    disponibilidade = fields.StringField(required=False, choices=WORKHOURS)
+    cpf = fields.StringField(required=True, unique=False)
+    disponibilidade = fields.StringField(required=False)
     endereco = fields.EmbeddedDocumentField(Endereco, required=False)
     empresa = fields.ReferenceField('Company', required=False)
     cargo = fields.StringField(required=False)
