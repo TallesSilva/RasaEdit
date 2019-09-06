@@ -74,11 +74,11 @@ class Supplier(Document):
 
     nome = fields.StringField(required=True)
     cpf = fields.StringField(required=True, unique=True)
-    disponibilidade = fields.StringField(required=True, choices=WORKHOURS)
-    endereco = fields.EmbeddedDocumentField(Endereco, required=True)
-    empresa = fields.ReferenceField('Company', required=True)
-    cargo = fields.StringField(required=True)
-    contato = fields.EmbeddedDocumentField(Contato, required=True)
+    disponibilidade = fields.StringField(required=False, choices=WORKHOURS)
+    endereco = fields.EmbeddedDocumentField(Endereco, required=False)
+    empresa = fields.ReferenceField('Company', required=False)
+    cargo = fields.StringField(required=False)
+    contato = fields.EmbeddedDocumentField(Contato, required=False)
 
 class Customer(Document):
     meta = {'strict': False}

@@ -2,8 +2,7 @@ import requests
 from faker import Faker
 
 fake = Faker('pt_BR')
-, , , , , , , , , , , , , ,
-, ,, None, None, None
+
 payload = ({
     "nome": fake.name(),
     "cpf": fake.cpf(),
@@ -33,4 +32,6 @@ payload = ({
 
 print(payload)
 #while(1)
-r = requests.post('http://localhost:8080/suppliers/', data = payload )
+r = requests.post('http://192.168.1.3:8080/suppliers/', data = payload )
+print(r.status_code)
+print(r.text)
