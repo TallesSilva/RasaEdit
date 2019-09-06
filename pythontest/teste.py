@@ -14,7 +14,7 @@ class Generator:
         try:
             response = requests.post(
                 'http://192.168.1.3:8080/{}/'.format(self.collection),
-                data=dumps(self.data))
+                data=loads(self.data))
             logger.info(
                 "Foram inseridos {} documentos na coleção {}".format(self.data,
                                                                      self.collection)

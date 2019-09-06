@@ -2,11 +2,6 @@ from django.db import models
 from django.utils import timezone
 
 from mongoengine import Document, fields, EmbeddedDocument
-from faker import Faker
-from datetime import datetime
-
-fake = Faker('pt_BR')
-now = datetime.now()
 
 ESTADOS = ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MT', 'MS', 'MG',
            'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO']
@@ -74,11 +69,11 @@ class Supplier(Document):
 
     nome = fields.StringField(required=True)
     cpf = fields.StringField(required=True, unique=False)
-    disponibilidade = fields.StringField(required=False)
-    endereco = fields.EmbeddedDocumentField(Endereco, required=False)
-    empresa = fields.ReferenceField('Company', required=False)
+    disponibilidade = fields.StringField(required=True, choices=WORKHOURS)
+    endereco = fields.EmbeddedDocumentField(Endereco, required=True)
+    empresa = fields.ReferenceField('Company', required=True)
     cargo = fields.StringField(required=False)
-    contato = fields.EmbeddedDocumentField(Contato, required=False)
+    contato = fields.EmbeddedDocumentField(Contato, required=True)
 
 class Customer(Document):
     meta = {'strict': False}

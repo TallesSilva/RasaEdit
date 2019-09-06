@@ -1,6 +1,7 @@
 import requests
 from json import dumps, loads
 import logging
+import json
 
 logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
@@ -11,10 +12,11 @@ class Generator:
 
     def export_to_mongo(self):
         response = None
+        print(self.data)
         try:
             response = requests.post(
-                'http://192.168.1.3:8080/{}/'.format(self.collection),
-                data=dumps(self.data))
+                'http://192.168.1.3:8080/suppliers/',
+                data=self.data)
             logger.info(
                 "Foram inseridos {} documentos na coleção {}".format(self.data,
                                                                      self.collection)
@@ -34,7 +36,7 @@ class GeneratorSupplier(Generator):
         from fakes import get_fake_supplier
         try:
             fetch = get_fake_supplier()
-            self.data.append(fetch)
+            self.data = json.dumps(fetch, indent=4)
             return fetch
         except Exception as falha:
             logger.error(falha.__name__)
