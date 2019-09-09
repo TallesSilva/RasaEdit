@@ -2,6 +2,14 @@ import requests
 from json import dumps, loads
 import logging
 import json
+from constants import (
+    MONGO_HOST,
+    MONGO_PORT,
+    MONGO_USER,
+    MONGO_PASS, 
+    MONGO_DEFAULT_DB #aia
+)
+from interfaces import get_mongo_database
 
 logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
@@ -9,51 +17,68 @@ logger.setLevel(logging.DEBUG)
 class Generator:
     def __init__(self):
         self.data = []
+        
 
     def export_to_mongo(self):
         response = None
         print(self.data)
         try:
-            response = requests.post(
-                'http://192.168.1.3:8080/suppliers/',
-                data=self.data)
-            logger.info(
-                "Foram inseridos {} documentos na coleção {}".format(self.data,
-                                                                     self.collection)
-            )
-            return response.status_code
+            db = get_mongo_database()
+            collection = db[self.collection]
+            response = collection.insert_one(self.data)
         except Exception as ex:
             logger.error(ex.__name__)
             logger.error("Falha ao inserir no mongo: {}".format(str(ex)))
-            return response.status_code if response else 500
+            
 
 class GeneratorSupplier(Generator):
     def __init__(self):
         super(GeneratorSupplier, self).__init__()
-        self.collection = 'suppliers'
+        self.collection = 'supplier'
 
     def generate(self):
         from fakes import get_fake_supplier
         try:
-            fetch = get_fake_supplier()
-            self.data = json.dumps(fetch, indent=4)
-            return fetch
+            self.data = get_fake_supplier()
+            return self.data
         except Exception as falha:
             logger.error(falha.__name__)
-            logger.error("Falha ao receber supplier fake: {}".format(str(falha)))
-            return response.status_code if response else 500
+            logger.error("Falha ao atualizar supplier fake: {}".format(str(falha)))
+            
 
+
+class GeneratorCustomer(Generator):
+    def __init__(self):
+        super(GeneratorCustomer, self).__init__()
+        self.collection = 'customer'
+        
+    def generate(self):
+        from fakes import get_fake_customer
+        try:
+            self.data = get_fake_customer()
+            return self.data
+        except Exception as falha:
+            logger.error(falha.__name__)
+            logger.error("Falha ao atualizar customer fake: {}".format(str(falha)))
+            
+class GeneratorTimetable(Generator):
+    def __init__(self):
+        super(GeneratorTimetable,self).__init__()
+        self.collection = 'time_table'
+        
+    def generate(self):
+        try: 
+            self.data = 
 
 if __name__ == '__main__':
     generators = [
-        GeneratorSupplier()
-        # GeneratorUser()
+        #GeneratorSupplier()
+        #GeneratorCustomer()
+        #GeneratorTimetable()
     ]
     for g in generators:
         g.generate()
         g.export_to_mongo()
-    print(g.export_to_mongo())
-
 
 '''
 
