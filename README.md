@@ -6,6 +6,6 @@
 
 ![Esboço das tabelas](https://github.com/TallesSilva/RasaEdit/blob/master/pythontest/Esbo%C3%A7o.10.20.jpeg?raw=true)
 
-/'kɑpiɹajt/ Kyros Tecnologia
+ Kyros Tecnologia
 Codigo generico para testes de criação de bd usando pymongo
 dev : TallesSilva https://github.com/TallesSilva/RasaEdit

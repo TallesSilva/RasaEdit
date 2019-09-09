@@ -2,15 +2,20 @@ import requests
 from json import dumps, loads
 import logging
 import json
+from interfaces import get_mongo_database
 from constants import (
     MONGO_HOST,
     MONGO_PORT,
     MONGO_USER,
     MONGO_PASS, 
-    MONGO_DEFAULT_DB #aia
+    MONGO_DEFAULT_DB 
 )
-from interfaces import get_mongo_database
-
+from fakes import (
+    get_fake_supplier,
+    get_fake_customer,
+    get_fake_timetable_none,
+    get_fake_timetable_date
+)
 logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
 
@@ -37,7 +42,6 @@ class GeneratorSupplier(Generator):
         self.collection = 'supplier'
 
     def generate(self):
-        from fakes import get_fake_supplier
         try:
             self.data = get_fake_supplier()
             return self.data
@@ -53,7 +57,6 @@ class GeneratorCustomer(Generator):
         self.collection = 'customer'
         
     def generate(self):
-        from fakes import get_fake_customer
         try:
             self.data = get_fake_customer()
             return self.data
