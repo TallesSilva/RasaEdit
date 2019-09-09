@@ -64,7 +64,7 @@ class GeneratorCustomer(Generator):
             logger.error(falha.__name__)
             logger.error("Falha ao atualizar customer fake: {}".format(str(falha)))
             
-'''            
+          
 class GeneratorTimetable(Generator):
     def __init__(self):
         super(GeneratorTimetable,self).__init__()
@@ -72,8 +72,12 @@ class GeneratorTimetable(Generator):
         
     def generate(self):
         try: 
-            self.data = 
-'''
+            self.data = get_fake_timetable_none()
+            return self.data
+        except Exception as falha:
+            logger.erro(falha.__name__)
+            logger.erro("falha ao criar timetable sem a data: {}".format(str(falha)))            
+
 
 if __name__ == '__main__':
     generators = [
@@ -84,3 +88,4 @@ if __name__ == '__main__':
     for g in generators:
         g.generate()
         g.export_to_mongo()
+        

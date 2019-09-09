@@ -2,6 +2,7 @@ from faker import Faker
 from json import dumps
 from datetime import datetime
 
+
 fake = Faker('pt_BR')
 
 def get_fake_supplier():
@@ -64,10 +65,11 @@ def get_fake_customer():
 
 def get_fake_timetable_none():
     payload_timetable = {
-        
+    "IDSupplier" : "",
+    "IDUser" : "",
+    "date" :   ""   #( d/m/a, h:m:s) none
     }
-    
-    raise NotImplementedError
+    return payload_timetable
 
 def get_fake_timetable_date():
     raise NotImplementedError
