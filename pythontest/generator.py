@@ -64,6 +64,7 @@ class GeneratorCustomer(Generator):
             logger.error(falha.__name__)
             logger.error("Falha ao atualizar customer fake: {}".format(str(falha)))
             
+'''            
 class GeneratorTimetable(Generator):
     def __init__(self):
         super(GeneratorTimetable,self).__init__()
@@ -72,6 +73,7 @@ class GeneratorTimetable(Generator):
     def generate(self):
         try: 
             self.data = 
+'''
 
 if __name__ == '__main__':
     generators = [
@@ -82,13 +84,3 @@ if __name__ == '__main__':
     for g in generators:
         g.generate()
         g.export_to_mongo()
-
-'''
-
-print(json.dumps(payload, indent = 4))
-#while(1)
-r = requests.post('http://192.168.1.3:8080/suppliers/', data = payload )
-#print(type(payload["contato"]))
-print(r.text)
-print(r.status_code)
-'''

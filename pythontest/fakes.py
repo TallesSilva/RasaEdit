@@ -63,6 +63,9 @@ def get_fake_customer():
     return payload_customer
 
 def get_fake_timetable_none():
+    payload_timetable = {
+        
+    }
     
     raise NotImplementedError
 

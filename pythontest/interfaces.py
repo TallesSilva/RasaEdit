@@ -1,5 +1,4 @@
 from pymongo import MongoClient
-
 from constants import (
     MONGO_HOST,
     MONGO_PORT,
@@ -20,3 +19,4 @@ def star_query_collection(collection_name):
     collection = database[collection_name]
 
     return list(collection.find({}))
+   
