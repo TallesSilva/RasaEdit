@@ -65,9 +65,9 @@ class GeneratorCustomer(Generator):
             logger.error("Falha ao atualizar customer fake: {}".format(str(falha)))
             
           
-class GeneratorTimetable(Generator):
+class GeneratorTimetableNone(Generator):
     def __init__(self):
-        super(GeneratorTimetable,self).__init__()
+        super(GeneratorTimetableNone,self).__init__()
         self.collection = 'time_table'
         
     def generate(self):
@@ -78,12 +78,25 @@ class GeneratorTimetable(Generator):
             logger.erro(falha.__name__)
             logger.erro("falha ao criar timetable sem a data: {}".format(str(falha)))            
 
+class GeneratorTimetabledate(Generator):
+    def __init__(self):
+        super(GeneratorTimetabledate,self).__init__()
+        self.collection = 'time_table'
+        
+    def generate(self):
+        try: 
+            self.data = get_fake_timetable_date()
+            return self.data
+        except Exception as falha:
+            logger.erro(falha.__name__)
+            logger.erro("falha ao criar timetable sem a data: {}".format(str(falha)))            
 
 if __name__ == '__main__':
     generators = [
         #GeneratorSupplier()
         #GeneratorCustomer()
-        #GeneratorTimetable()
+        #GeneratorTimetableNone()
+        GeneratorTimetabledate()
     ]
     for g in generators:
         g.generate()
