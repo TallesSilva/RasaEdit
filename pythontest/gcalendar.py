@@ -40,6 +40,7 @@ def insert_datetime():
             'timeZone': 'America/Sao Paulo',  
         },
     }
+    
     print('event created')
     service.events().insert(calendarId='primary', body=event).execute()
 

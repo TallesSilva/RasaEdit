@@ -1,7 +1,6 @@
 from faker import Faker
-from json import dumps
+from json import dumps, load
 from datetime import datetime
-
 
 fake = Faker('pt_BR')
 
@@ -75,39 +74,19 @@ def get_fake_timetable_none(): #como linkar com dados já existentes ?
     }
     return payload_timetable
 
-def get_fake_timetable_date(): #como linkar com dados já existentes ?
+def get_fake_timetable_date(status, observacao, task, supplier, customer, company): #como linkar com dados já existentes ?
+    date = get_fake_date()
     payload_timetable = {
-    "data": None,
-    "status": None,
-    "observacao": "",
-    "task": None,
-    "supplier": null,
-    "customer": null,
-    "company": null
+    "data": date,
+    "status": status,
+    "observacao": observacao,
+    "task": task,
+    "supplier": supplier,
+    "customer": customer,
+    "company": company
     }
     return payload_timetable
 
 def get_fake_date():
-    payload_date =  {
-        'summary': summary,
-        'location': location,
-        'description': description,
-        'start': {
-            'dateTime': start_time.strftime("%Y-%m-%dT%H:%M:%S"),
-            'timeZone': timezone,
-        },
-        'end': {
-            'dateTime': end_time.strftime("%Y-%m-%dT%H:%M:%S"),
-            'timeZone': timezone,
-        },
-        'attendees': [
-        {'email':attendees },
-    ],
-        'reminders': {
-            'useDefault': False,
-            'overrides': [
-                {'method': 'email', 'minutes': 24 * 60},
-                {'method': 'popup', 'minutes': 10},
-            ],
-        },
-    }
+    date = fake.date(pattern="%Y-%m-%d", end_datetime="+5d")
+    return date
