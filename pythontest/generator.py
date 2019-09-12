@@ -30,7 +30,7 @@ class Insert:
             db = get_mongo_database()
             collection = db[self.collection]
             response = collection.insert_one(self.data)
-            print(self.data)
+            #print(self.data)
         except Exception as ex:
             logger.error(ex.__name__)
             logger.error("Falha ao inserir no mongo: {}".format(str(ex)))
@@ -83,7 +83,7 @@ class GeneratorTimetabledate(Insert):
         
     def generate(self):
         try: 
-            self.data = get_fake_timetable_date("TesteStatus", "TesteObservation", "testeTask", "5d76adae1188f3a58d34290e", "5d76abf0069a19eab194db16", "5d6020abd12e66a47a7888ed")
+            self.data = get_fake_timetable_date("TesteStatus", "TesteObservation", "testeTask", "5d7aa52a5314b1cbe6e61880", "5d7aa53aa7b3e440bb782946", "5d6020abd12e66a47a7888ed")
             return self.data
         except Exception as falha:
             logger.erro(falha.__name__)
@@ -91,12 +91,11 @@ class GeneratorTimetabledate(Insert):
 
 if __name__ == '__main__':
     generators = [
-        #GeneratorSupplier()
-        #GeneratorCustomer()
+        GeneratorSupplier(),
+        GeneratorCustomer(),
         #GeneratorTimetableNone()
         GeneratorTimetabledate()
     ]
     for g in generators:
         g.generate()
         g.export_to_mongo()
-        
