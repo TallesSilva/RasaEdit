@@ -81,9 +81,9 @@ def get_fake_timetable_date(): #como linkar com dados já existentes ?
     "status": None,
     "observacao": "",
     "task": None,
-    "supplier": null,
-    "customer": null,
-    "company": null
+    "supplier": None,
+    "customer": None,
+    "company": None
     }
     return payload_timetable
 
