@@ -6,9 +6,11 @@ from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 
-SCOPES = ['https://www.googleapis.com/auth/calendar.readonly']
 
-def config():
+SCOPES = ['https://www.googleapis.com/auth/calendar']
+
+    
+def insert_datetime():
     creds = None
     if os.path.exists('token.pickle'):
         with open('token.pickle', 'rb') as token:
@@ -23,34 +25,22 @@ def config():
         with open('token.pickle', 'wb') as token:
             pickle.dump(creds, token)
 
-        service = build('calendar', 'v3', credentials=creds)
+    service = build('calendar', 'v3', credentials=creds)
 
-def insert_datetime(y,m,d,th,tm,ts,td):
-    #chamar os parametros creds e services da função de configuraçao
-    start_time = datetime(y, m, d, th, tm, ts)
-    end_time = start_time + timedelta(hours=td)
-    timezone = 'Asia/Kolkata'
     event = {
-        'summary': 'IPL Final 2019',
-        'location': 'Hyderabad',
-        'description': 'MI vs TBD',
+        'summary': 'Evento Google API',
+        'location': 'Minha casa',
+        'description': 'Teste de inserção com o googleApi',
         'start': {
-            'dateTime': start_time.strftime("%Y-%m-%dT%H:%M:%S"),
-            'timeZone': timezone,
+            'dateTime': '2019-09-12T09:00:00-07:00',
+            'timeZone': 'America/Sao Paulo',
         },
         'end': {
-            'dateTime': end_time.strftime("%Y-%m-%dT%H:%M:%S"),
-            'timeZone': timezone,
+            'dateTime': '2019-09-12T15:00:00-07:00',
+            'timeZone': 'America/Sao Paulo',  
         },
-        'reminders': {
-            'useDefault': False,
-            'overrides': [
-                {'method': 'email', 'minutes': 24 * 60},
-                {'method': 'popup', 'minutes': 10},
-            ],
-        },
-    }  
+    }
     print('event created')
-    return service.events().insert(calendarId='primary', body=event).execute()
+    service.events().insert(calendarId='primary', body=event).execute()
 
-config()
+insert_datetime()
