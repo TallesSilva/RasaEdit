@@ -19,24 +19,23 @@ from fakes import (
 logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
 
-class Generator:
+class Insert:
     def __init__(self):
         self.data = []
         
-
     def export_to_mongo(self):
         response = None
-        print(self.data)
+        
         try:
             db = get_mongo_database()
             collection = db[self.collection]
             response = collection.insert_one(self.data)
+            print(self.data)
         except Exception as ex:
             logger.error(ex.__name__)
             logger.error("Falha ao inserir no mongo: {}".format(str(ex)))
             
-
-class GeneratorSupplier(Generator):
+class GeneratorSupplier(Insert):
     def __init__(self):
         super(GeneratorSupplier, self).__init__()
         self.collection = 'supplier'
@@ -50,8 +49,7 @@ class GeneratorSupplier(Generator):
             logger.error("Falha ao atualizar supplier fake: {}".format(str(falha)))
             
 
-
-class GeneratorCustomer(Generator):
+class GeneratorCustomer(Insert):
     def __init__(self):
         super(GeneratorCustomer, self).__init__()
         self.collection = 'customer'
@@ -65,7 +63,7 @@ class GeneratorCustomer(Generator):
             logger.error("Falha ao atualizar customer fake: {}".format(str(falha)))
             
           
-class GeneratorTimetableNone(Generator):
+class GeneratorTimetableNone(Insert):
     def __init__(self):
         super(GeneratorTimetableNone,self).__init__()
         self.collection = 'time_table'
@@ -78,14 +76,14 @@ class GeneratorTimetableNone(Generator):
             logger.erro(falha.__name__)
             logger.erro("falha ao criar timetable sem a data: {}".format(str(falha)))            
 
-class GeneratorTimetabledate(Generator):
+class GeneratorTimetabledate(Insert):
     def __init__(self):
         super(GeneratorTimetabledate,self).__init__()
         self.collection = 'time_table'
         
     def generate(self):
         try: 
-            self.data = get_fake_timetable_date()
+            self.data = get_fake_timetable_date("TesteStatus", "TesteObservation", "testeTask", "5d76adae1188f3a58d34290e", "5d76abf0069a19eab194db16", "5d6020abd12e66a47a7888ed")
             return self.data
         except Exception as falha:
             logger.erro(falha.__name__)

@@ -95,10 +95,10 @@ class Task(Document):
 class TimeTable(Document):
     meta = {'strict': False}
 
-    data = fields.DateTimeField(required=True)
-    status = fields.StringField(required=True, choices=STATUS)
-    task = fields.ReferenceField('Task', required=True)
+    data = fields.StringField(required=True)
+    status = fields.StringField(required=True)
+    task = fields.StringField(required=True)
     supplier = fields.ReferenceField('Supplier', required=True)
     customer = fields.ReferenceField('Customer', required=True)
     company = fields.ReferenceField('Company', required=True)
-    observacao = fields.StringField(required=False)
+    observacao = fields.StringField(required=True)

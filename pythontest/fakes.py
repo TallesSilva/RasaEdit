@@ -1,7 +1,6 @@
 from faker import Faker
-from json import dumps
+from json import dumps, load
 from datetime import datetime
-
 
 fake = Faker('pt_BR')
 
@@ -75,8 +74,10 @@ def get_fake_timetable_none(): #como linkar com dados já existentes ?
     }
     return payload_timetable
 
-def get_fake_timetable_date(): #como linkar com dados já existentes ?
+def get_fake_timetable_date(status, observacao, task, supplier, customer, company): #como linkar com dados já existentes ?
+    date = get_fake_date()
     payload_timetable = {
+<<<<<<< HEAD
     "data": None,
     "status": None,
     "observacao": "",
@@ -84,30 +85,18 @@ def get_fake_timetable_date(): #como linkar com dados já existentes ?
     "supplier": None,
     "customer": None,
     "company": None
+=======
+    "data": date,
+    "status": status,
+    "observacao": observacao,
+    "task": task,
+    "supplier": supplier,
+    "customer": customer,
+    "company": company
+>>>>>>> f3afe5f25c7b59f71c0f32a65f4453aa5e6e0de6
     }
     return payload_timetable
 
 def get_fake_date():
-    payload_date =  {
-        'summary': summary,
-        'location': location,
-        'description': description,
-        'start': {
-            'dateTime': start_time.strftime("%Y-%m-%dT%H:%M:%S"),
-            'timeZone': timezone,
-        },
-        'end': {
-            'dateTime': end_time.strftime("%Y-%m-%dT%H:%M:%S"),
-            'timeZone': timezone,
-        },
-        'attendees': [
-        {'email':attendees },
-    ],
-        'reminders': {
-            'useDefault': False,
-            'overrides': [
-                {'method': 'email', 'minutes': 24 * 60},
-                {'method': 'popup', 'minutes': 10},
-            ],
-        },
-    }
+    date = fake.date(pattern="%Y-%m-%d", end_datetime="+5d")
+    return date
