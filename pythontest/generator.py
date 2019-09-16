@@ -16,6 +16,7 @@ from fakes import (
     get_fake_timetable_none,
     get_fake_timetable_date
 )
+
 logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
 
@@ -91,8 +92,8 @@ class GeneratorTimetabledate(Insert):
 
 if __name__ == '__main__':
     generators = [
-        GeneratorSupplier(),
-        GeneratorCustomer(),
+        #GeneratorSupplier(),
+        #GeneratorCustomer(),
         #GeneratorTimetableNone()
         GeneratorTimetabledate()
     ]

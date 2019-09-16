@@ -75,7 +75,8 @@ def get_fake_timetable_none(): #como linkar com dados já existentes ?
     return payload_timetable
 
 def get_fake_timetable_date(status, observacao, task, supplier, customer, company): #como linkar com dados já existentes ?
-    date = get_fake_date()
+    fake_date = get_fake_date()
+    date = fake_date.strftime("%Y-%m-%dT%H:%M:%S")
     payload_timetable = {
     "data": date,
     "status": status,
@@ -88,5 +89,4 @@ def get_fake_timetable_date(status, observacao, task, supplier, customer, compan
     return payload_timetable
 
 def get_fake_date():
-    date = fake.date_f(pattern="%Y-%m-%d", end_datetime="+5d")
-    return date
+    return fake.future_datetime("+2d")
