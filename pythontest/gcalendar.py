@@ -78,4 +78,4 @@ def create_event(customer):
 def get_timetable():
     raise NotImplementedError
 
-create_event("joao")
+create_event()
