@@ -88,11 +88,16 @@ def get_fake_timetable_date(status, observacao, task, supplier, customer, compan
     return payload_timetable
 
 def get_fake_date():
-    fake_date = fake.future_datetime("+2d")
     try :
-        if fake_date.hour > 8 and fake_date.hour < 18 :
-            return fake_date #.strftime("%Y-%m-%dT%H:%M:%S")
+        fake_date = fake.future_datetime("+2d")
     except:
+        print(" ")
+    return fake_date
+
+def valida_data(data):
+    if data>8 and data<18 and data!=None:
+        return data
+    else:
         get_fake_date()
 
 print(get_fake_date())
