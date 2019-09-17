@@ -2,17 +2,27 @@ from __future__ import print_function
 import datetime
 import pickle
 import os.path
+from os import remove
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
-import requests
+from fakes import get_fake_date
 
 
 
-SCOPES = ['https://www.googleapis.com/auth/calendar.settings.readonly']
+DEFAULT_VISIT_TIME = 30  # in minutes
+SCOPES = ['https://www.googleapis.com/auth/calendar']
+CREDENTIALS = 'credentials.json'
 
-    
-def insert_datetime():
+def clean_up(exception):
+    print("Uma exceção foi lançada:\n{} Os arquivos de credenciais foram "
+          "apagados. O arquivo `credentials.json` deve ser buscado novamente"
+          "".format(exception))
+    remove('token.pickle')
+    setup_interface()
+        
+
+def setup_interface():
     creds = None
     if os.path.exists('token.pickle'):
         with open('token.pickle', 'rb') as token:
@@ -22,37 +32,50 @@ def insert_datetime():
             creds.refresh(Request())
         else:
             flow = InstalledAppFlow.from_client_secrets_file(
-                'credentials.json', SCOPES)
+                CREDENTIALS, SCOPES)
             creds = flow.run_local_server(port=0)
         with open('token.pickle', 'wb') as token:
             pickle.dump(creds, token)
 
-    service = build('calendar', 'v3', credentials=creds)
+    try:
+        service = build('calendar', 'v3', credentials=creds)
+        return service
+    except Exception as ex:
+        clean_up(ex)
 
+def date_to_str(date):
+    return date.strftime("%Y-%m-%dT%H:%M:%S")
     
-    event = {
-        'summary': 'Evento Google API',
-        'location': 'Minha casa',
-        'description': 'Teste de inserção com o googleApi',
+def fill_event_document(customer: dict,
+                       start_date: str,
+                       end_date: str):
+    return {
+        'summary': 'Visita técnica',
+        'location': customer.get("address"),
+        'description': 'Visita técnica à casa de um {}'.format(customer.get("name")),
         'start': {
-            'dateTime': '2019-09-17T09:00:00-07:00',
-            'timeZone': 'America/Sao Paulo',
+            'dateTime': start_date,
+            'timeZone': 'America/Sao_Paulo',
         },
         'end': {
-            'dateTime': '2019-09-17T15:00:00-07:00',
-            'timeZone': 'America/Sao Paulo',  
+            'dateTime': end_date,
+            'timeZone': 'America/Sao_Paulo',  
         },
     }
-    print('event created')
+    
+def create_event(customer):
+    service = setup_interface()
+    start_date = get_fake_date()
+    end_date = date_to_str(start_date + datetime.timedelta(minutes=DEFAULT_VISIT_TIME))
+    start_date = date_to_str(start_date)
+    
+    event = fill_event_document(customer, start_date, end_date)
     try:
         service.events().insert(calendarId='primary', body=event).execute()
-        return "OK"
-    except Exception as falha:
-        logger.erro(falha.__name__)
-        logger.erro("falha ao criar timetable sem a data: {}".format(str(falha)))  
+    except Exception as ex:
+        raise NotImplementedError
 
+def get_timetable():
+    raise NotImplementedError
 
-def get_calendar():
-    r = requests.get("http://192.168.1.3:8080/timetables/")
-    print(r.json())
-
+create_event("joao")
