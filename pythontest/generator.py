@@ -1,5 +1,3 @@
-import requests
-from json import dumps, loads
 import logging
 import json
 from interfaces import get_mongo_database
@@ -84,7 +82,7 @@ class GeneratorTimetabledate(Insert):
         
     def generate(self):
         try: 
-            self.data = get_fake_timetable_date("TesteStatus", "TesteObservation", "testeTask", "5d7aa52a5314b1cbe6e61880", "5d7aa53aa7b3e440bb782946", "5d6020abd12e66a47a7888ed")
+            self.data = get_fake_timetable_date("Aberto", "TesteObservation", "5d64086607538688f4e94077", "5d7aa52a5314b1cbe6e61880", "5d7aa53aa7b3e440bb782946", "5d6020abd12e66a47a7888ed")
             return self.data
         except Exception as falha:
             logger.erro(falha.__name__)
