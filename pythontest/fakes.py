@@ -90,6 +90,7 @@ def get_fake_timetable_date(status, observacao, task, supplier, customer, compan
 def get_fake_date():
     try :
         fake_date = fake.future_datetime("+2d")
+        #fake_date = fake_date.strftime("%Y-%m-%dT%H:%M:%S")
     except:
         print(" ")
     return fake_date
@@ -99,5 +100,3 @@ def valida_data(data):
         return data
     else:
         get_fake_date()
-
-print(get_fake_date())
