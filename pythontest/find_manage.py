@@ -28,7 +28,8 @@ class Find:
 
             doc = collection.find({self.ref: self.data}) # self.ref é o tipo de dado que vai ser
             for response in doc:                         # usado para fazer a busca na DB
-                print(response)                          # exemplo: "id", "cpf" e "nome"
+                #print(response)                         # exemplo: "id", "cpf" e "nome"
+                return response
         except Exception as ex: 
             logger.error(ex.__name__)
             logger.error("Falha ao inserir no mongo: {}".format(str(ex)))
@@ -51,7 +52,7 @@ class FindSupplier(Find):
             return self.data
         except Exception as falha:
             logger.erro(falha.__name__)
-            logger.erro("falha ao buscar supplier: {}".format(str(falha)))
+            logger.erro("falha ao buscar: {}".format(str(falha)))
  
 class FindCustomer(Find):
     def __init__(self):
@@ -67,7 +68,7 @@ class FindCustomer(Find):
             return self.data
         except Exception as falha:
             logger.erro(falha.__name__)
-            logger.erro("falha ao buscar supplier: {}".format(str(falha)))
+            logger.erro("falha ao buscar: {}".format(str(falha)))
         raise
 
 class FindTimetable(Find):
@@ -84,7 +85,24 @@ class FindTimetable(Find):
             return self.data
         except Exception as falha:
             logger.error(falha.__name__)
-            logger.erro("falha ao buscar supplier: {}".format(str(falha)))
+            logger.erro("falha ao buscar: {}".format(str(falha)))
+        raise
+    
+class FindCompany(Find):
+    def __init__(self):
+        super(FindCompany, self).__init__()
+        self.collection = 'company'
+        self.ref = []
+        self.data = []
+
+    def find(self):
+        try:
+            self.ref = "cnpj"
+            self.data = "31.321.313/0001-50"
+            return self.data
+        except Exception as falha:
+            logger.error(falha.__name__)
+            logger.erro("falha ao buscar: {}".format(str(falha)))
         raise
 
 if __name__ == '__main__':
@@ -92,6 +110,7 @@ if __name__ == '__main__':
         #FindSupplier()
         #FindCustomer()
         #FindTimetable()
+        FindCompany()
        ]
     for g in generators:
         g.find()

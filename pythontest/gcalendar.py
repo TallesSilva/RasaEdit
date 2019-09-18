@@ -72,5 +72,3 @@ def create_event(customer):
         service.events().insert(calendarId='primary', body=event).execute()
     except Exception as ex:
         raise 
-
-create_event('joao')

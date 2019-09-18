@@ -9,11 +9,17 @@ from constants import (
     MONGO_PASS, 
     MONGO_DEFAULT_DB 
 )
+from find_manage import (
+    FindSupplier,
+    FindCustomer,
+    FindTimetable,
+    FindCompany
+)
 
 fake = Faker('pt_BR')
 
 ####################################################################################################
-#                           Criação de perfil Fake para preencher db                               #
+#                                      Criação de perfil Fake                                      #
 ####################################################################################################
 
 def get_fake_supplier():
@@ -49,7 +55,7 @@ def get_fake_customer():
     payload_customer = {
         "nome": fake.name(),
         "cpf": fake.cpf(),
-        "dia_preferencia": None, #faker.providers.date_time
+        "dia_preferencia": None,
         "hora_preferencia": None,
         "empresa": None,
         "endereco": {
@@ -74,7 +80,7 @@ def get_fake_customer():
     }
     return payload_customer
 
-def get_fake_timetable_none(): #como linkar com dados já existentes ?
+def get_fake_timetable_none():
     payload_timetable = {
     "data": None,
     "status": None,
@@ -87,28 +93,72 @@ def get_fake_timetable_none(): #como linkar com dados já existentes ?
     return payload_timetable
 
 def get_fake_timetable_date(status, observacao, task, supplier, customer, company):
-    fake_date = get_fake_date()
     payload_timetable = {
-    "data": fake_date,
+    "data": get_fake_date(),
     "status": status,
     "observacao": observacao,
     "task": task,
-    "supplier": supplier,
-    "customer": customer,
-    "company": company
+    "supplier": get_supplier(),
+    "customer": get_customer(),
+    "company": 'get_company()'
     }
     return payload_timetable
 
 def get_fake_date():
+    fake_data = []
     try :
-        fake_date = fake.future_datetime("+2d")
+        fake_date = valida_data()
         #fake_date = fake_date.strftime("%Y-%m-%dT%H:%M:%S")
+        return fake_date
     except:
-        print(" ")
-    return fake_date
+        raise NotImplementedError
 
-def valida_data(data):
-    if data>8 and data<18 and data!=None:
-        return data
-    else:
-        get_fake_date()
+def valida_data():
+    data = fake.future_datetime("+2d")
+    #data.minute = None
+    #data.second = None
+    if data.hour<8 or data.hour>17:
+        data = valida_data()
+    return data    
+
+def get_supplier():
+    f = FindSupplier()
+    f.find()
+    response = f.find_to_mongo()
+    return response
+
+def get_customer():
+    f = FindCustomer()
+    f.find()
+    response = f.find_to_mongo()
+    return response
+
+def get_timetable():
+    f = FindTimetable()
+    f.find()
+    response = f.find_to_mongo()
+    return response
+
+def get_company():
+    f = FindCompany()
+    f.find()
+    response = f.find_to_mongo()
+    return response
+
+def create_timetable(status, observacao, task):
+    supplier = get_supplier()
+    customer = get_customer()
+    timetable = get_timetable()
+    company = get_company()
+    payload_timetable = {
+    "data": get_fake_date(),
+    "status": status,
+    "observacao": observacao,
+    "task": task,
+    "supplier": supplier["cpf"],
+    "customer": customer["cpf"],
+    "company": company["cnpj"]
+    }
+    return payload_timetable
+
+print(create_timetable("pendente", None, "visita tecnica"))
