@@ -7,7 +7,7 @@ fake = Faker('pt_BR')
 def get_fake_supplier():
     payload_supplier = {
         "nome": fake.name(),
-        "cpf": fake.cpf(),
+        u"cpf": fake.cpf(),
         "disponibilidade": "Integral",
         "cargo": "estagiario",
         "empresa": None,

@@ -18,22 +18,45 @@ from fakes import (
 logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
 
+####################################################################################################
+#                          Metodos construtores das superlasses                                    #
+####################################################################################################
+
+class Find:
+    def __init__(self):
+        self.cpf = []
+
+    def find_to_mongo(self):
+        try:
+            db = get_mongo_database()
+            collection = db[self.collection]
+
+            doc = collection.find({self.ref: self.cpf}) # self.ref é o tipo de dado que vai ser
+            for response in doc :                       # usado para fazer a busca na DB
+                print(response)                         # exemplo: "id", "cpf" e "nome"
+        except Exception as ex: 
+            logger.error(ex.__name__)
+            logger.error("Falha ao inserir no mongo: {}".format(str(ex)))
+
 class Insert:
     def __init__(self):
         self.data = []
-        
-    def export_to_mongo(self):
+
+    def insert_to_mongo(self):
         response = None
-        
         try:
             db = get_mongo_database()
             collection = db[self.collection]
             response = collection.insert_one(self.data)
-            #print(self.data)
         except Exception as ex:
             logger.error(ex.__name__)
             logger.error("Falha ao inserir no mongo: {}".format(str(ex)))
-            
+        return response
+
+####################################################################################################
+#                                  Metodos construtores das sub classes                            #
+####################################################################################################
+
 class GeneratorSupplier(Insert):
     def __init__(self):
         super(GeneratorSupplier, self).__init__()
@@ -46,13 +69,12 @@ class GeneratorSupplier(Insert):
         except Exception as falha:
             logger.error(falha.__name__)
             logger.error("Falha ao atualizar supplier fake: {}".format(str(falha)))
-            
 
 class GeneratorCustomer(Insert):
     def __init__(self):
         super(GeneratorCustomer, self).__init__()
         self.collection = 'customer'
-        
+
     def generate(self):
         try:
             self.data = get_fake_customer()
@@ -60,13 +82,12 @@ class GeneratorCustomer(Insert):
         except Exception as falha:
             logger.error(falha.__name__)
             logger.error("Falha ao atualizar customer fake: {}".format(str(falha)))
-            
-          
+
 class GeneratorTimetableNone(Insert):
     def __init__(self):
         super(GeneratorTimetableNone,self).__init__()
         self.collection = 'time_table'
-        
+
     def generate(self):
         try: 
             self.data = get_fake_timetable_none()
@@ -79,7 +100,7 @@ class GeneratorTimetabledate(Insert):
     def __init__(self):
         super(GeneratorTimetabledate,self).__init__()
         self.collection = 'time_table'
-        
+
     def generate(self):
         try: 
             self.data = get_fake_timetable_date("Aberto", "TesteObservation", "5d64086607538688f4e94077", "5d7aa52a5314b1cbe6e61880", "5d7aa53aa7b3e440bb782946", "5d6020abd12e66a47a7888ed")
@@ -93,8 +114,8 @@ if __name__ == '__main__':
         #GeneratorSupplier(),
         #GeneratorCustomer(),
         #GeneratorTimetableNone()
-        GeneratorTimetabledate()
+        #GeneratorTimetabledate()
     ]
     for g in generators:
         g.generate()
-        g.export_to_mongo()
+        g.insert_to_mongo()
