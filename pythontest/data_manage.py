@@ -8,18 +8,23 @@ from constants import (
     MONGO_PASS, 
     MONGO_DEFAULT_DB 
 )
-from fakes import (
+from create_profile import (
     get_fake_supplier,
     get_fake_customer,
     get_fake_timetable_none,
-    get_fake_timetable_date
+    get_fake_timetable_date,
+)
+from manage_profile import (
+    get_supplier,
+    get_customer,
+    get_timetable_date,
 )
 
 logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
 
 ####################################################################################################
-#                          Metodos construtores das superlasses                                    #
+#                          Metodos construtores das super classes                                  #
 ####################################################################################################
 
 class Find:
@@ -103,18 +108,35 @@ class GeneratorTimetabledate(Insert):
 
     def generate(self):
         try: 
-            self.data = get_fake_timetable_date("Aberto", "TesteObservation", "5d64086607538688f4e94077", "5d7aa52a5314b1cbe6e61880", "5d7aa53aa7b3e440bb782946", "5d6020abd12e66a47a7888ed")
+            self.data = get_fake_timetable_date("Aberto", "TesteObservation", "5d64086607538688f4e94077", "5d825b61f00ed355f07f94d2", "5d825b61f00ed355f07f94d4", "5d6020abd12e66a47a7888ed")
             return self.data
         except Exception as falha:
             logger.erro(falha.__name__)
             logger.erro("falha ao criar timetable sem a data: {}".format(str(falha)))            
+
+class FindSupplier(Find):
+    def __init__(self):
+        super(FindSupplier,self).__init__()
+        self.collection = 'supplier'
+        self.ref = []
+        self.cpf = []
+
+    def find(self):
+        try: 
+            self.ref = get_referencia_supplier()
+            self.cpf = get_supplier_exist()
+            return self.ref, self.cpf
+        except Exception as falha:
+            logger.erro(falha.__name__)
+            logger.erro("falha ao buscar supplier: {}".format(str(falha)))  
+
 
 if __name__ == '__main__':
     generators = [
         #GeneratorSupplier(),
         #GeneratorCustomer(),
         #GeneratorTimetableNone()
-        #GeneratorTimetabledate()
+        GeneratorTimetabledate()
     ]
     for g in generators:
         g.generate()

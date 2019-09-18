@@ -1,8 +1,20 @@
 from faker import Faker
-from json import dumps, load
 from datetime import datetime
+import json
+from interfaces import get_mongo_database
+from constants import (
+    MONGO_HOST,
+    MONGO_PORT,
+    MONGO_USER,
+    MONGO_PASS, 
+    MONGO_DEFAULT_DB 
+)
 
 fake = Faker('pt_BR')
+
+####################################################################################################
+#                           Criação de perfil Fake para preencher db                               #
+####################################################################################################
 
 def get_fake_supplier():
     payload_supplier = {
