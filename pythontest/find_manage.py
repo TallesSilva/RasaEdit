@@ -46,7 +46,7 @@ class Find:
             collection = db[self.collection]
             doc = collection.find({},{self.data_type: self.data_info})
             for response in doc:
-                vetor.insert(i, response['cpf'])
+                vetor.insert(i, response[self.data_type])
                 i+=1
             return vetor
         except Exception as ex: 
@@ -78,7 +78,7 @@ class FindOne(Find):
 if __name__ == '__main__':
     x=0
     generators = [
-        FindOne()
+        #FindOne()
        ]
     for g in generators:
         g.find('cpf', 1, 'customer')

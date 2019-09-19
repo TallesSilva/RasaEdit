@@ -143,36 +143,36 @@ def get_company(data_type, data_info, collection):
     return response
 
 def get_all_customer(referencia):
-    f = Find() 
+    f = FindOne() 
     f.find(referencia, 1, 'customer')
     response = f.find_all_to_mongo()
     return response
 
 def get_all_supplier(referencia):
-    f = Find() 
+    f = FindOne() 
     f.find(referencia, 1, 'supplier')
     response = f.find_all_to_mongo()
     return response
 
 def get_all_company(referencia):
-    f = Find() 
+    f = FindOne() 
     f.find(referencia, 1, 'company')
     response = f.find_all_to_mongo()
     return response
 
 def get_all_timetable(referencia):
-    f = Find() 
-    f.find(referencia, 1, 'timetable')
+    f = FindOne() 
+    f.find(referencia, 1, 'time_table')
     response = f.find_all_to_mongo()
     return response
 
 def create_timetable():
     customers = get_all_customer('cpf')
-    companys = get_all_company('cnpj')
-    timetables = get_all_timetable('_id')
+    companies = get_all_company('cnpj')
+    timetables = get_all_timetable('task')
     suppliers = get_all_supplier('cpf')
     print(customers)
-    print(companys)
+    print(companies)
     print(timetables)
     print(suppliers)
     payload_timetable = {
@@ -180,9 +180,9 @@ def create_timetable():
     "status": 'Aberto',
     "observacao": '',
     "task": 'Instalação de Modem',
-    "supplier": supplier["cpf"],
-    "customer": customer["cpf"],
-    "company": company["cnpj"]
+    "supplier": suppliers[0],
+    "customer": customers[0],
+    "company": companies[0]
     }
     return payload_timetable
 
