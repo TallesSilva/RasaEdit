@@ -17,12 +17,12 @@ def __init__():
 def Find_Supplier():        
     try:
         db = get_mongo_database()
-        collection = db["supplier"]
+        collection = db["time_table"]
 
-        doc = collection.find({"cpf": "049.216.758-30"})
+        doc = collection.find({},{'_id': 0,'status': 'Aberto', 'customer': 1})
 
         for response in doc :
-            print(response['nome'])
+            print(response)
     except Exception as falha:
         logger.erro(falha.__name__)
         logger.erro("falha ao buscar supplier: {}".format(str(falha)))  

@@ -10,10 +10,7 @@ from constants import (
     MONGO_DEFAULT_DB 
 )
 from find_manage import (
-    FindSupplier,
-    FindCustomer,
-    FindTimetable,
-    FindCompany
+    FindOne,
 )
 
 fake = Faker('pt_BR')
@@ -98,9 +95,9 @@ def get_fake_timetable_date(status, observacao, task, supplier, customer, compan
     "status": status,
     "observacao": observacao,
     "task": task,
-    "supplier": get_supplier(),
-    "customer": get_customer(),
-    "company": 'get_company()'
+    "supplier": supplier,
+    "customer": customer,
+    "company": company
     }
     return payload_timetable
 
@@ -121,44 +118,72 @@ def valida_data():
         data = valida_data()
     return data    
 
-def get_supplier():
-    f = FindSupplier()
+def get_supplier(data_type, data_info, collection):
+    f = FindOne()
     f.find()
-    response = f.find_to_mongo()
+    response = f.Find_one_to_mongo()
     return response
 
-def get_customer():
-    f = FindCustomer()
+def get_customer(data_type, data_info, collection):
+    f = FindOne()
     f.find()
-    response = f.find_to_mongo()
+    response = f.Find_one_to_mongo()
     return response
 
-def get_timetable():
-    f = FindTimetable()
+def get_timetable(data_type, data_info, collection):
+    f = FindOne()
     f.find()
-    response = f.find_to_mongo()
+    response = f.Find_one_to_mongo()
     return response
 
-def get_company():
-    f = FindCompany()
+def get_company(data_type, data_info, collection):
+    f = FindOne()
     f.find()
-    response = f.find_to_mongo()
+    response = f.Find_one_to_mongo()
     return response
 
-def create_timetable(status, observacao, task):
-    supplier = get_supplier()
-    customer = get_customer()
-    timetable = get_timetable()
-    company = get_company()
+def get_all_customer(referencia):
+    f = Find() 
+    f.find(referencia, 1, 'customer')
+    response = f.find_all_to_mongo()
+    return response
+
+def get_all_supplier(referencia):
+    f = Find() 
+    f.find(referencia, 1, 'supplier')
+    response = f.find_all_to_mongo()
+    return response
+
+def get_all_company(referencia):
+    f = Find() 
+    f.find(referencia, 1, 'company')
+    response = f.find_all_to_mongo()
+    return response
+
+def get_all_timetable(referencia):
+    f = Find() 
+    f.find(referencia, 1, 'timetable')
+    response = f.find_all_to_mongo()
+    return response
+
+def create_timetable():
+    customers = get_all_customer('cpf')
+    companys = get_all_company('cnpj')
+    timetables = get_all_timetable('_id')
+    suppliers = get_all_supplier('cpf')
+    print(customers)
+    print(companys)
+    print(timetables)
+    print(suppliers)
     payload_timetable = {
     "data": get_fake_date(),
-    "status": status,
-    "observacao": observacao,
-    "task": task,
+    "status": 'Aberto',
+    "observacao": '',
+    "task": 'Instalação de Modem',
     "supplier": supplier["cpf"],
     "customer": customer["cpf"],
     "company": company["cnpj"]
     }
     return payload_timetable
 
-print(create_timetable("pendente", None, "visita tecnica"))
+create_timetable()
